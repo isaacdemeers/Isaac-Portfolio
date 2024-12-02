@@ -3,30 +3,45 @@
 import { useEffect, useRef, useState } from 'react';
 import rough from 'roughjs';
 import { useGameLogic } from './useGameLogic';
+import { GameState } from './types';
 
 export default function GameCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const { gameState, tower, updateTurretAngle } = useGameLogic(dimensions.width, dimensions.height);
+  const { gameState, tower, updateTurretAngle, setGameState } = useGameLogic(dimensions.width, dimensions.height);
 
-  // Gestionnaire de redimensionnement
+  // Gestionnaire de redimensionnement amélioré
   useEffect(() => {
     const updateDimensions = () => {
       if (containerRef.current) {
-        setDimensions({
-          width: containerRef.current.clientWidth,
-          height: containerRef.current.clientHeight,
-        });
+        const { width, height } = containerRef.current.getBoundingClientRect();
+        setDimensions({ width, height });
+
+        // Mettre à jour la taille du canvas
+        if (canvasRef.current) {
+          canvasRef.current.width = width;
+          canvasRef.current.height = height;
+        }
       }
     };
 
     // Initial setup
     updateDimensions();
 
-    // Mettre à jour les dimensions lors du redimensionnement
+    // Observer les changements de taille
+    const resizeObserver = new ResizeObserver(updateDimensions);
+    if (containerRef.current) {
+      resizeObserver.observe(containerRef.current);
+    }
+
+    // Mettre à jour lors du redimensionnement de la fenêtre
     window.addEventListener('resize', updateDimensions);
-    return () => window.removeEventListener('resize', updateDimensions);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener('resize', updateDimensions);
+    };
   }, []);
 
   // Gestionnaire d'événements de la souris
@@ -114,10 +129,61 @@ export default function GameCanvas() {
 
   }, [gameState, tower, dimensions]);
 
+  // Ajouter le gestionnaire de clic
+  useEffect(() => {
+    const handleClick = () => {
+      const side = Math.floor(Math.random() * 4);
+      let x = 0;
+      let y = 0;
+
+      switch (side) {
+        case 0: // top
+          x = Math.random() * dimensions.width;
+          y = -20;
+          break;
+        case 1: // right
+          x = dimensions.width + 20;
+          y = Math.random() * dimensions.height;
+          break;
+        case 2: // bottom
+          x = Math.random() * dimensions.width;
+          y = dimensions.height + 20;
+          break;
+        case 3: // left
+          x = -20;
+          y = Math.random() * dimensions.height;
+          break;
+      }
+
+      const newEnemy = {
+        id: Date.now(),
+        x,
+        y,
+        health: 2,
+      };
+
+      setGameState((prev: GameState) => ({
+        ...prev,
+        enemies: [...prev.enemies, newEnemy],
+      }));
+    };
+
+    const canvas = canvasRef.current;
+    if (canvas) {
+      canvas.addEventListener('click', handleClick);
+    }
+
+    return () => {
+      if (canvas) {
+        canvas.removeEventListener('click', handleClick);
+      }
+    };
+  }, [dimensions, setGameState]);
+
   return (
-    <div ref={containerRef} className="flex-1 w-full relative">
-      <div className="absolute flex flex-col items-start top-10 left-1/2 -translate-x-1/2 -translate-y-[calc(-10rem)] text-sm font-bold uppercase">
-        <span>Score</span>
+    <div ref={containerRef} className="flex flex-col justify-center items-center w-full h-full relative">
+      <div className="absolute top-1/2 gap-20 -translate-y-1/2 flex flex-col items-center text-xs font-bold uppercase">
+        <span>the useless score</span>
         <span>{'->'} {gameState.score}</span>
       </div>
       <canvas

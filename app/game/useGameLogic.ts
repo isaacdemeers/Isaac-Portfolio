@@ -179,5 +179,6 @@ export const useGameLogic = (canvasWidth: number, canvasHeight: number) => {
     gameState,
     tower,
     updateTurretAngle,
+    setGameState,
   };
 };
