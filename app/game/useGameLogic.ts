@@ -6,10 +6,11 @@ import { Particle } from './Particle';
 
 const ENEMY_SPEED = 2;
 const SPAWN_INTERVAL = 2000;
-const TOWER_RANGE = 100;
+const TOWER_RANGE = 80;
 const TOWER_DAMAGE = 1;
 const PARTICLES_PER_EXPLOSION = 12;
 const TURRET_RANGE = 300;
+const TOWER_SIZE = 40;
 
 // Fonctions utilitaires pour le localStorage
 const getStoredScore = () => {
@@ -48,7 +49,7 @@ export const useGameLogic = (canvasWidth: number, canvasHeight: number) => {
   }, [gameState.score]);
 
   const tower = {
-    x: canvasWidth / 2,
+    x: canvasWidth * 0.75,
     y: canvasHeight / 2,
     range: TOWER_RANGE,
   };
@@ -133,7 +134,9 @@ export const useGameLogic = (canvasWidth: number, canvasHeight: number) => {
             const distanceToTower = Math.hypot(tower.x - enemy.x, tower.y - enemy.y);
             let health = enemy.health;
 
-            if (distanceToTower <= tower.range) {
+            if (distanceToTower <= TOWER_SIZE / 2) {
+              health = 0;
+            } else if (distanceToTower <= tower.range) {
               health -= TOWER_DAMAGE;
             }
 

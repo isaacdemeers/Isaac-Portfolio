@@ -80,7 +80,7 @@ export default function GameCanvas() {
     ctx.clearRect(0, 0, dimensions.width, dimensions.height);
 
     // Draw tower
-    rc.rectangle(tower.x - 25, tower.y - 25, 50, 50, {
+    rc.rectangle(tower.x - 20, tower.y - 20, 40, 40, {
       fill: 'black',
       fillStyle: 'solid',
       roughness: 2,
@@ -181,8 +181,8 @@ export default function GameCanvas() {
   }, [dimensions, setGameState]);
 
   return (
-    <div ref={containerRef} className="flex flex-col justify-center items-center w-full h-full relative">
-      <div className="absolute top-1/2 gap-20 -translate-y-1/2 flex flex-col items-center text-xs font-bold uppercase">
+    <div ref={containerRef} className="absolute flex flex-col justify-center items-end w-full h-full ">
+      <div className="absolute top-3/5 gap-2 right-20  p-20 pr-0 opacity-0 hover:opacity-100 transition-opacity duration-300 -translate-y-1/2 flex flex-col items-end text-xs font-bold uppercase">
         <span>the useless score</span>
         <span>{'->'} {gameState.score}</span>
       </div>
