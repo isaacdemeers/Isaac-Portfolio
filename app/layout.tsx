@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { font } from '@/lib/font';
+import { fontSpaceMono } from '@/lib/font';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${font.className} antialiased`}>{children}</body>
+      <body className={`${fontSpaceMono.className} antialiased`}>{children}</body>
     </html>
   );
 }

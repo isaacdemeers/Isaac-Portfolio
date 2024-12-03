@@ -1,6 +1,6 @@
 import { Space_Mono, Radley } from 'next/font/google';
 
-export const font = Space_Mono({
+export const fontSpaceMono = Space_Mono({
     subsets: ['latin'],
     weight: ['400', '700'],
 });
