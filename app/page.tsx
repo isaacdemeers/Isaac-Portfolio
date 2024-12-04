@@ -35,7 +35,7 @@ export default function Home() {
           <motion.h2 initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.4 }} className="ml-10">Demeerseman</motion.h2>
 
           <div className="flex flex-col items-center justify-start w-full ">
-            <p className={`${fontManrope.className} text-lg w-full`}>Bienvenue,</p>
+            <p className={`${fontManrope.className} text-lg w-full`}>Welcome,</p>
 
           </div>
 

@@ -4,6 +4,8 @@ import NavLink from "@/components/NavLink";
 import { fontSpaceMono, fontManrope, fontCormorant } from "@/lib/font";
 import { AtSign, Check, Copy } from 'lucide-react';
 import { useState } from 'react';
+import Image from "next/image";
+import xequal from "@/public/svg/xequal.svg";
 
 export default function Work() {
     const [copied, setCopied] = useState(false);
@@ -24,11 +26,9 @@ export default function Work() {
             <div className="flex z-10 flex-col items-center justify-center  h-full w-3/5 ">
                 <div className={`${fontCormorant.className} text-7xl flex  flex-col  gap-10`}>
                     <NavLink href="/" active={true} type="back">Go back</NavLink>
-                    <h2 className="">Work</h2>
+                    <h2 className="text-8xl">Work</h2>
 
-                    <div className="flex flex-col items-center justify-start w-full ">
-                        <p className={`${fontManrope.className} text-lg w-full`}>Here you will find everything related <br /> to my <span className="font-bold">professional profile</span>.</p>
-                    </div>
+                    <p className={`${fontManrope.className} text-lg w-full`}>Here you will find everything related <br /> to my <span className="font-bold">professional profile</span>.</p>
 
                     <ul className={`${fontManrope.className} flex flex-col items-start`}>
                         <li
@@ -48,12 +48,14 @@ export default function Work() {
                     <ul className={`${fontSpaceMono.className} flex flex-col items-start`}>
                         <NavLink href="https://www.linkedin.com/in/isaac-demeerseman-8701b6247/" active={true} type="arrow">Linkedin</NavLink>
                         <NavLink href="https://github.com/isaacdemeerseman" active={true} type="arrow">Github</NavLink>
-                        <NavLink href="/" active={false} type="arrow">CV</NavLink>
+                        <NavLink href="/work/cv" active={true} type="arrow">CV</NavLink>
                     </ul>
                 </div>
             </div>
 
-            <div className="flex z-10 flex-col items-center justify-center  h-full w-2/5 bg-slate-100 rounded-xl"></div>
+            <div className="flex z-10 flex-col items-center justify-center h-full w-2/5 bg-slate-100 rounded-xl relative overflow-hidden">
+
+            </div>
         </main>
     );
 }
