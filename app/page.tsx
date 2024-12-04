@@ -1,19 +1,9 @@
+'use client'
 import Link from 'next/link';
 import GameCanvas from './game/GameCanvas';
 import { fontRadley, fontSpaceMono, fontCormorant, fontManrope } from '@/lib/font';
-
-
-function NavLink({ href, children, active }: { href: string, children: React.ReactNode, active: boolean }) {
-  const style = {
-    link: 'text-black font-normal uppercase text-sm  transition-transform duration-100',
-  }
-  return (
-    <li className="flex items-center gap-2 group">
-      <p className={`${active ? 'text-black group-hover:translate-x-1' : 'text-gray-600'} font-bold uppercase text-sm  transition-transform duration-100`}>{'->'}</p>
-      <a href={href} className={`${active ? 'group-hover:underline cursor-pointer' : ' cursor-default line-through text-slate-600'} ${style.link}`}>{children}</a>
-    </li>
-  )
-}
+import NavLink from '@/components/NavLink';
+import { motion } from 'framer-motion';
 
 export default function Home() {
 
@@ -37,12 +27,12 @@ export default function Home() {
     // </main>
 
 
-    <main className="h-screen w-screen flex items-center justify-start bg-slate-100 p-10">
+    <main className="h-screen w-screen flex items-center justify-start bg-slate-100">
 
-      <div className="flex z-50 flex-col items-center justify-center h-full w-3/5 ">
+      <div className="flex z-10 flex-col items-center justify-center h-full w-3/5 ml-10">
         <div className={`${fontCormorant.className} text-7xl flex flex-col  gap-10`}>
-          <h2 className="">  Isaac</h2>
-          <h2 className="ml-10">Demeerseman</h2>
+          <motion.h2 initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className="">  Isaac</motion.h2>
+          <motion.h2 initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.4 }} className="ml-10">Demeerseman</motion.h2>
 
           <div className="flex flex-col items-center justify-start w-full ">
             <p className={`${fontManrope.className} text-lg w-full`}>Bienvenue,</p>
@@ -51,11 +41,11 @@ export default function Home() {
 
           <ul className={`${fontSpaceMono.className} flex flex-col items-start`}>
 
-            <NavLink href="/projects" active={false}>Projects</NavLink>
-            <NavLink href="/games" active={false}>Games</NavLink>
-            <NavLink href="/work" active={false}>work</NavLink>
+            <NavLink href="/" active={false} type="arrow">Projects</NavLink>
+            <NavLink href="/" active={false} type="arrow">Games</NavLink>
+            <NavLink href="/work" active={true} type="arrow">work</NavLink>
 
-            <NavLink href="https://github.com/isaacdemeers" active={true}>github</NavLink>
+            <NavLink href="https://github.com/isaacdemeers" active={true} type="arrow">github</NavLink>
 
           </ul>
         </div>
