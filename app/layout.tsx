@@ -6,8 +6,8 @@ import Loader from "../components/Loader";
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Tower Defense",
-  description: "A simple tower defense game",
+  title: "Isaac Demeerseman",
+  description: "Portfolio website of Isaac Demeerseman",
 };
 
 export default function RootLayout({
