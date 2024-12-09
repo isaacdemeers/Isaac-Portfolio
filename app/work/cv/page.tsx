@@ -43,7 +43,7 @@ export default function Work() {
                     <ul>
                         <button
                             onClick={handleDownload}
-                            className={`${fontSpaceMono.className} text-[1rem] flex items-center gap-2 border-none bg-transparent`}
+                            className={`${fontSpaceMono.className} text-[1rem] flex items-center gap-2 border-none bg-transparent hover:underline`}
                         >
                             <Download className="w-4 h-4" />
                             Download CV
