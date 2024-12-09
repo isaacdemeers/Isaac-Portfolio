@@ -7,6 +7,7 @@ import { useState } from 'react';
 import Image from "next/image";
 import xequal from "@/public/svg/xequal.svg";
 
+
 export default function Work() {
     const [copied, setCopied] = useState(false);
 
@@ -46,15 +47,14 @@ export default function Work() {
                     </ul>
 
                     <ul className={`${fontSpaceMono.className} flex flex-col items-start`}>
-                        <NavLink href="https://www.linkedin.com/in/isaac-demeerseman-8701b6247/" active={true} type="arrow">Linkedin</NavLink>
-                        <NavLink href="https://github.com/isaacdemeers" active={true} type="arrow">Github</NavLink>
+                        <NavLink href="https://www.linkedin.com/in/isaac-demeerseman-8701b6247/" active={true} type="Link">Linkedin</NavLink>
+                        <NavLink href="https://github.com/isaacdemeers" active={true} type="Link">Github</NavLink>
                         <NavLink href="/work/cv" active={true} type="arrow">CV</NavLink>
                     </ul>
                 </div>
             </div>
 
             <div className="flex z-10 flex-col items-center justify-center h-full w-2/5 bg-slate-100 rounded-xl relative overflow-hidden">
-
             </div>
         </main>
     );
