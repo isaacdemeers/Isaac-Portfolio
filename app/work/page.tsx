@@ -2,10 +2,16 @@
 
 import NavLink from "@/components/NavLink";
 import { fontSpaceMono, fontManrope, fontCormorant } from "@/lib/font";
-import { AtSign, Check, Copy } from 'lucide-react';
+import { AtSign, Check, Copy, Clock } from 'lucide-react';
 import { useState } from 'react';
 import Image from "next/image";
+import { motion, stagger } from "framer-motion";
+import Link from "next/link";
+
 import xequal from "@/public/frame_work.svg";
+
+import projects from "@/lib/work/portfolio/projects";
+import { Separator } from "@/components/ui/separator";
 
 
 
@@ -50,13 +56,16 @@ export default function Work() {
                     <ul className={`${fontSpaceMono.className} flex flex-col items-start`}>
                         <NavLink href="https://www.linkedin.com/in/isaac-demeerseman-8701b6247/" active={true} type="Link">Linkedin</NavLink>
                         <NavLink href="https://github.com/isaacdemeers" active={true} type="Link">Github</NavLink>
+                        <NavLink href="/work/portfolio" active={true} type="arrow">Portfolio de compétences</NavLink>
                         <NavLink href="/work/cv" active={true} type="arrow">CV</NavLink>
+
+
                     </ul>
                 </div>
             </div>
 
-            <div className="flex z-10 flex-col group items-end justify-center h-full w-2/5  rounded-xl relative">
-                <div className="relative flex w-1/3 items-center justify-center group-hover:blur-md group-hover:opacity-50 group-hover:scale-90 group-hover:translate-x-7 transition-all duration-700">
+            <div className="flex z-10 flex-col group items-center justify-center h-full w-2/5  rounded-xl relative">
+                <div className="relative flex w-2/3 items-center justify-center group-hover:blur-md group-hover:opacity-0 group-hover:scale-90 group-hover:translate-x-7 transition-all duration-700">
                     <Image src={xequal} alt="X Equal" className="" />
 
                     <div className="absolute w-full h-fit flex items-start justify-center flex-col p-6">
@@ -69,8 +78,27 @@ export default function Work() {
                 </div>
 
                 <section className=" w-full h-full absolute transition-all duration-700">
-                    <ul className="bg-purple-400 h-full w-full flex items-center justify-end pr-10 ">
-                        <li className="p-4 bg-slate-700 rounded-xl w-80">fsdfds</li>
+                    <ul className="h-full w-full flex flex-col items-end justify-start p-4 pr-10 gap-4 overflow-scroll">
+                        {projects.map((item, index) => (
+
+                            <li key={index} className=" cursor-pointer origin-right rounded-xl w-64 h-fit bg-slate-100 border-2 border-slate-200  backdrop-blur-sm translate-x-5 opacity-0 blur-lg group-hover:translate-x-0 group-hover:scale-100 scale-75 group-hover:opacity-100 group-hover:blur-0 transition-all duration-500">
+                                <Link href={`/project/${item.id}`} className="flex items-start p-4  justify-center flex-col" >
+                                    <h3 className={` ${fontSpaceMono.className} font-black text-lg`}>{item.title}</h3>
+                                    <div className="flex items-center justify-start gap-2">
+                                        <h4 className="text-gray-600 flex items-center justify-start gap-1"><Clock size={12} /> {item.readTime}</h4>
+                                        <Separator orientation="vertical" className="h-3 w-[1px] bg-slate-300" />
+                                        <h4 className="text-gray-600 flex text-xs w-full "> {item.tags.join(', ')}</h4>
+                                    </div>
+
+
+                                    <figure className="w-full max-h-32 overflow-hidden rounded-md mt-2">
+                                        <Image src={item.image} width={200} height={200} alt="project image" className="w-full h-full object-cover" />
+
+                                    </figure>
+                                </Link>
+                            </li>
+
+                        ))}
                     </ul>
                 </section>
 
