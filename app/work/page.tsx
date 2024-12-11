@@ -72,7 +72,7 @@ export default function Work() {
                     <Image src={xequal} alt="X Equal" className=" rotate-90  " />
 
                     <div className="absolute w-full h-fit flex items-center justify-center flex-col p-6">
-                        <p className={`${fontManrope.className} text-sm text-center font-bold text-slate-900 uppercase`}>Work</p>
+                        <p className={`${fontManrope.className} text-sm text-center font-bold text-slate-900 uppercase`}>[ Work ]</p>
 
                         <h2 className={`${fontSpaceMono.className} text-3xl text-center text-slate-900`}>Projects</h2>
                         {projects.length > 0 ? <p className={`${fontManrope.className} text-sm text-center mt-2  text-slate-500`}>{projects.length} projects</p> : <p className={`${fontManrope.className} text-xs text-center mt-2  text-slate-500 uppercase`}>No projects yet.</p>}
