@@ -5,7 +5,6 @@ import { fontSpaceMono, fontManrope, fontCormorant } from "@/lib/font";
 import { AtSign, Check, Copy, Clock } from 'lucide-react';
 import { useState } from 'react';
 import Image from "next/image";
-import { motion, stagger } from "framer-motion";
 import Link from "next/link";
 
 import xequal from "@/public/frame_work.svg";
@@ -15,7 +14,11 @@ import { Separator } from "@/components/ui/separator";
 
 
 
+
 export default function Work() {
+
+
+
     const [copied, setCopied] = useState(false);
 
     const handleCopyEmail = async () => {
@@ -65,10 +68,14 @@ export default function Work() {
             </div>
 
             <div className="flex z-10 flex-col group items-center justify-center h-full w-2/5  rounded-xl relative">
-                <div className="relative flex w-2/3 items-center justify-center group-hover:blur-md group-hover:opacity-0 group-hover:scale-90 group-hover:translate-x-7 transition-all duration-700">
-                    <Image src={xequal} alt="X Equal" className="" />
+                <div className="relative flex w-2/3 items-center justify-center group-hover:blur-md group-hover:opacity-20 group-hover:scale-90 [transition:all_0.4s_cubic-bezier(0.76,0,0.24,1)]">
+                    <Image src={xequal} alt="X Equal" className=" rotate-90  " />
 
-                    <div className="absolute w-full h-fit flex items-start justify-center flex-col p-6">
+                    <div className="absolute w-full h-fit flex items-center justify-center flex-col p-6">
+                        <p className={`${fontManrope.className} text-sm text-center font-bold text-slate-900 uppercase`}>Work</p>
+
+                        <h2 className={`${fontSpaceMono.className} text-3xl text-center text-slate-900`}>Projects</h2>
+                        {projects.length > 0 ? <p className={`${fontManrope.className} text-sm text-center mt-2  text-slate-500`}>{projects.length} projects</p> : <p className={`${fontManrope.className} text-xs text-center mt-2  text-slate-500 uppercase`}>No projects yet.</p>}
 
                     </div>
 
@@ -78,8 +85,11 @@ export default function Work() {
                     <ul className="h-full w-full flex flex-col items-end justify-start p-4 pr-10 gap-4 overflow-scroll">
                         {projects.map((item, index) => (
 
-                            <li key={index} className=" cursor-pointer origin-right rounded-xl w-64 h-fit bg-slate-100 border-2 border-slate-200  backdrop-blur-sm translate-x-5 opacity-0 blur-lg group-hover:translate-x-0 group-hover:scale-100 scale-75 group-hover:opacity-100 group-hover:blur-0 transition-all duration-500">
-                                <Link href={`/project/${item.id}`} className="flex items-start p-4  justify-center flex-col" >
+                            <li key={index} className=" cursor-pointer relative origin-right rounded-xl w-72 h-fit bg-slate-100 bg-opacity-50 backdrop-blur-sm border-2 border-slate-200  translate-x-5 opacity-0 blur-lg group-hover:translate-x-0 group-hover:scale-100 scale-90 group-hover:opacity-100 group-hover:blur-0 hover:rotate-1 [transition:all_0.4s_cubic-bezier(0.76,0,0.24,1)]">
+                                <div className="absolute top-0 -translate-x-full w-20 h-full  flex items-start justify-center">
+                                    <p className={`${fontSpaceMono.className} text-3xl text-slate-900 text-center font-bold uppercase p-4 `}>{item.id.toString().padStart(2, '0')}</p>
+                                </div>
+                                <Link href={`/work/project/${item.id}`} className="flex items-start p-4  justify-center flex-col" >
                                     <h3 className={` ${fontSpaceMono.className} font-black text-lg`}>{item.title}</h3>
                                     <div className="flex items-center justify-start gap-2">
                                         <h4 className="text-gray-600 flex items-center justify-start gap-1"><Clock size={12} /> {item.readTime}</h4>
@@ -89,7 +99,7 @@ export default function Work() {
 
 
                                     <figure className="w-full max-h-32 overflow-hidden rounded-md mt-2">
-                                        <Image src={item.image} width={200} height={200} alt="project image" className="w-full h-full object-cover" />
+                                        <Image src={item.image} width={200} height={200} alt="project image" className="w-full h-full  object-cover" />
 
                                     </figure>
                                 </Link>

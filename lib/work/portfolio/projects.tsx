@@ -7,8 +7,10 @@ const projects = [
         description: 'A calendar for the MMI',
         image: cv.src,
         tags: ['NEXT', 'TS', 'SCSS'],
-        source: '',
-        readTime: '5min',
+        source: '/work/project/1',
+        readTime: 5,
+        keywords: '',
+
     },
     {
         id: 2,
@@ -16,8 +18,9 @@ const projects = [
         description: 'A calendar for the MMI',
         image: cv.src,
         tags: ['NEXT', 'TS', 'SCSS'],
-        source: '',
-        readTime: '25min',
+        source: '/work/project/2',
+        readTime: 25,
+        keywords: '',
     },
     {
         id: 3,
@@ -25,17 +28,19 @@ const projects = [
         description: 'A shared planning tool for the MMI',
         image: cv.src,
         tags: ['NEXT', 'TS', 'DOCKER', 'PHP'],
-        source: '',
-        readTime: '5min',
+        source: '/work/project/3',
+        readTime: 5,
+        keywords: '',
     },
     {
-        id: 3,
+        id: 4,
         title: 'PlanIt',
         description: 'A shared planning tool for the MMI',
         image: cv.src,
         tags: ['NEXT', 'TS', 'DOCKER', 'PHP'],
-        source: '',
-        readTime: '5min',
+        source: '/work/project/4',
+        readTime: 5,
+        keywords: '',
     }
 ]
 
