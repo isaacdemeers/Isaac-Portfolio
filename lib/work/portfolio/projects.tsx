@@ -27,6 +27,15 @@ const projects = [
         tags: ['NEXT', 'TS', 'DOCKER', 'PHP'],
         source: '',
         readTime: '5min',
+    },
+    {
+        id: 3,
+        title: 'PlanIt',
+        description: 'A shared planning tool for the MMI',
+        image: cv.src,
+        tags: ['NEXT', 'TS', 'DOCKER', 'PHP'],
+        source: '',
+        readTime: '5min',
     }
 ]
 

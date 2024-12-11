@@ -69,9 +69,6 @@ export default function Work() {
                     <Image src={xequal} alt="X Equal" className="" />
 
                     <div className="absolute w-full h-fit flex items-start justify-center flex-col p-6">
-                        <p className={`${fontSpaceMono.className} text-lg uppercase`}>Album</p>
-                        <p className={`${fontSpaceMono.className} text-lg uppercase`}>Album</p>
-                        <p className={`${fontSpaceMono.className} text-lg uppercase`}>Album</p>
 
                     </div>
 
