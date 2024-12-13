@@ -27,7 +27,7 @@ export default function Loader() {
 
     return (
         <div
-            className={`fixed inset-0 bg-slate-100 z-50 transition-opacity duration-500 flex items-center justify-center ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            className={`fixed inset-0 bg-slate-100 z-50 flex items-center transition-all duration-300 justify-center scale-150  ${isLoading ? 'bg-opacity-100 backdrop-blur-lg' : 'bg-opacity-0 backdrop-blur-0 pointer-events-none'
                 }`}
         >
             {/* <div className="w-8 h-8 border-4 border-black border-t-transparent rounded-full animate-spin" /> */}
