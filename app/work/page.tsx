@@ -54,7 +54,7 @@ export default function Work() {
             </div>
 
             <div className="flex z-10 flex-col items-center justify-center h-full w-2/5 bg-slate-100 rounded-xl relative overflow-hidden">
-
+                <div className="p-5 flex item-center justify-center bg-slate-200 rounded-2xl"> <p>Content in creation</p></div>
             </div>
         </main>
     );

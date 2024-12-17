@@ -3,7 +3,7 @@
 import NavLink from "@/components/NavLink";
 import { fontSpaceMono, fontManrope, fontCormorant } from "@/lib/font";
 import Image from "next/image";
-import cv from "@/public/cv.png";
+import cv from "@/public/CV-Isaac-DEMEERSEMAN.png";
 import { Download } from "lucide-react";
 import VanillaTilt from 'vanilla-tilt';
 import { useEffect } from 'react';
@@ -22,8 +22,8 @@ export default function Work() {
     const handleDownload = () => {
         // Créer un lien pour télécharger le PDF
         const link = document.createElement('a');
-        link.href = '/CV_Isaac_Demeerseman.pdf';
-        link.download = 'CV_Isaac_Demeerseman.pdf';
+        link.href = '/CV-Isaac-DEMEERSEMAN.pdf';
+        link.download = 'CV-Isaac-DEMEERSEMAN.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
