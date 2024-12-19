@@ -1,4 +1,4 @@
-import { Space_Mono, Radley, Cormorant_SC, Manrope, Nabla, Rubik_80s_Fade } from 'next/font/google';
+import { Space_Mono, Radley, Cormorant_SC, Manrope, Nabla, Rubik_80s_Fade, IBM_Plex_Sans } from 'next/font/google';
 
 export const fontSpaceMono = Space_Mono({
     subsets: ['latin'],
@@ -16,10 +16,10 @@ export const fontCormorant = Cormorant_SC({
     weight: ['400'],
 });
 
-export const fontManrope = Manrope({
-    subsets: ['latin'],
-    weight: ['400'],
-});
+// export const fontManrope = Manrope({
+//     subsets: ['latin'],
+//     weight: ['400'],
+// });
 
 export const fontNabla = Nabla({
     subsets: ['latin'],
@@ -29,4 +29,9 @@ export const fontNabla = Nabla({
 export const fontRubik80sFade = Rubik_80s_Fade({
     subsets: ['latin'],
     weight: ['400'],
+});
+
+export const fontManrope = IBM_Plex_Sans({
+    subsets: ['latin'],
+    weight: ['400', '700', '500', '600', '300', '200', '100'],
 });

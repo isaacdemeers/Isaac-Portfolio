@@ -1,6 +1,7 @@
 "use client";
 
 import { fontSpaceMono } from '@/lib/font';
+import { ExternalLink, LinkIcon } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 export default function NavLink({ href, children, active, type }: { href: string, children: React.ReactNode, active: boolean, type: string }) {
@@ -17,7 +18,7 @@ export default function NavLink({ href, children, active, type }: { href: string
     };
 
     let arrow = null;
-    if (type === 'arrow') {
+    if (type === 'arrow' || type === 'Link') {
         arrow = <p className={`${active ? 'text-black group-hover:translate-x-1' : 'text-gray-600'} ${fontSpaceMono.className} font-bold uppercase text-sm  transition-transform duration-100`}>{'->'}</p>
     }
     else if (type === 'back') {
@@ -30,9 +31,10 @@ export default function NavLink({ href, children, active, type }: { href: string
             <a
                 href={href}
                 onClick={handleClick}
-                className={`${active ? 'group-hover:underline cursor-pointer' : ' cursor-default line-through text-slate-600'} ${style.link}`}
+                className={`${active ? 'group-hover:underline cursor-pointer' : ' cursor-default line-through text-slate-600'} ${style.link} flex items-center gap-1`}
             >
                 {children}
+                {type == 'Link' && <ExternalLink className="w-3 h-3" />}
             </a>
         </li>
     )

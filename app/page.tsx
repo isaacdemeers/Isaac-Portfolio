@@ -45,7 +45,7 @@ export default function Home() {
             <NavLink href="/" active={false} type="arrow">Games</NavLink>
             <NavLink href="/work" active={true} type="arrow">work</NavLink>
 
-            <NavLink href="https://github.com/isaacdemeers" active={true} type="arrow">github</NavLink>
+            <NavLink href="https://github.com/isaacdemeers" active={true} type="Link">github</NavLink>
 
           </ul>
         </div>
