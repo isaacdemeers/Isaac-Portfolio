@@ -83,11 +83,10 @@ export default function Work() {
 
                 <section className=" w-full h-full absolute transition-all duration-700">
                     <ul className="h-full w-full relative flex flex-col items-end justify-start p-4 pr-10 gap-4 overflow-scroll">
-                        <div className="w-full h-20 bg-gradient-to-b absolute top-0 left-0 from-slate-100 to-slate-200"></div>
 
                         {projects.map((item, index) => (
 
-                            <li key={index} className=" cursor-pointer relative origin-right rounded-xl w-72 h-fit bg-slate-100 bg-opacity-50 backdrop-blur-sm border-2 border-slate-200  translate-x-5 opacity-0 blur-lg group-hover:translate-x-0 group-hover:scale-100 scale-90 group-hover:opacity-100 group-hover:blur-0 hover:rotate-1 [transition:all_0.4s_cubic-bezier(0.76,0,0.24,1)]">
+                            <li key={index} className=" p-2 cursor-pointer relative origin-right rounded-xl w-72 h-fit bg-slate-100 bg-opacity-50 backdrop-blur-sm border-2 border-slate-200  translate-x-5 opacity-0 blur-lg group-hover:translate-x-0 group-hover:scale-100 scale-90 group-hover:opacity-100 group-hover:blur-0 hover:rotate-1 [transition:all_0.4s_cubic-bezier(0.76,0,0.24,1)]">
                                 <div className="absolute top-0 -translate-x-full w-20 h-full flex flex-col items-end justify-start ">
                                     <p className={`${fontSpaceMono.className} text-3xl text-slate-900 text-center font-bold uppercase p-4`}>{item.id.toString().padStart(2, '0')}</p>
                                     <p className={`${fontManrope.className} text-xs text-slate-900 text-center uppercase -rotate-90  p-2 rounded-md`}>{item.year}</p>

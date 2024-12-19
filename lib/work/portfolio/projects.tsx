@@ -1,6 +1,20 @@
 import cv from "@/public/cv.png";
 
-const projects = [
+interface Project {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    tags: string[];
+    source: string;
+    readTime: number;
+    keywords: string;
+    year: number;
+    month: number;
+    mdFile: string;
+}
+
+const projects: Project[] = [
     {
         id: 1,
         title: 'MMI Calendar',
@@ -12,6 +26,7 @@ const projects = [
         keywords: '',
         year: 2024,
         month: 12,
+        mdFile: 'projet-1.md',
     },
     {
         id: 2,
@@ -24,6 +39,7 @@ const projects = [
         keywords: '',
         year: 2024,
         month: 12,
+        mdFile: 'projet-2.md',
     },
     {
         id: 3,
@@ -36,6 +52,7 @@ const projects = [
         keywords: '',
         year: 2024,
         month: 12,
+        mdFile: 'projet-3.md',
     },
     {
         id: 4,
@@ -48,6 +65,7 @@ const projects = [
         keywords: '',
         year: 2024,
         month: 12,
+        mdFile: 'projet-4.md',
     }
 ]
 
