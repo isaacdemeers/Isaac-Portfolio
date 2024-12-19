@@ -12,13 +12,15 @@ interface Project {
     year: number;
     month: number;
     mdFile: string;
+    duration: string;
+    finished: boolean;
 }
 
 const projects: Project[] = [
     {
         id: 1,
         title: 'MMI Calendar',
-        description: 'A calendar for the MMI',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
         image: cv.src,
         tags: ['NEXT', 'TS', 'SCSS'],
         source: '/work/project/1',
@@ -27,6 +29,8 @@ const projects: Project[] = [
         year: 2024,
         month: 12,
         mdFile: 'projet-1.md',
+        duration: '2',
+        finished: false,
     },
     {
         id: 2,
@@ -40,6 +44,8 @@ const projects: Project[] = [
         year: 2024,
         month: 12,
         mdFile: 'projet-2.md',
+        duration: '2',
+        finished: true,
     },
     {
         id: 3,
@@ -53,6 +59,8 @@ const projects: Project[] = [
         year: 2024,
         month: 12,
         mdFile: 'projet-3.md',
+        duration: '2',
+        finished: true,
     },
     {
         id: 4,
@@ -66,6 +74,8 @@ const projects: Project[] = [
         year: 2024,
         month: 12,
         mdFile: 'projet-4.md',
+        duration: '2',
+        finished: true,
     }
 ]
 

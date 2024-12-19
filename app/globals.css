@@ -8,12 +8,50 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-/* Supprimez ou corrigez la classe border-border si elle existe */
+@layer components {
+  .prose {
+    @apply prose-headings:text-slate-900;
+    @apply prose-a:text-blue-600 prose-a:no-underline hover:prose-a:text-blue-800 hover:prose-a:underline;
+    @apply prose-strong:text-slate-900;
+    @apply prose-code:text-slate-900;
+    @apply prose-pre:bg-slate-100;
+    @apply prose-pre:p-4 prose-pre:rounded-lg;
+  }
 
-/* Si vous avez besoin d'une bordure personnalisée, vous pouvez la définir ainsi : */
-@layer utilities {
-  .border-custom {
-    @apply border-gray-200;
+  /* Masquer les backticks autour du code */
+  .prose code::before,
+  .prose code::after {
+    content: none !important;
+  }
+
+  /* Style pour les blocs de code */
+  .prose pre {
+    @apply bg-slate-100 p-4 rounded-lg;
+  }
+
+  .prose code {
+    @apply bg-slate-100 px-1 py-0.5 rounded text-sm;
+  }
+
+  .prose pre code {
+    @apply bg-transparent p-0;
+  }
+
+  /* Animation pour le bouton de retour en haut */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .scroll-to-top {
+    animation: fadeIn 0.3s ease-in-out;
   }
 }
 

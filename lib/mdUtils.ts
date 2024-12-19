@@ -2,7 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
-import html from 'remark-html';
+import remarkGfm from 'remark-gfm';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import rehypeRaw from 'rehype-raw';
+import rehypeStringify from 'rehype-stringify';
 
 export async function getProjectContent(mdFile: string) {
     const fullPath = path.join(process.cwd(), 'content/projects', mdFile);
@@ -13,8 +17,13 @@ export async function getProjectContent(mdFile: string) {
 
     // Convertir le markdown en HTML
     const processedContent = await remark()
-        .use(html)
+        .use(remarkParse)
+        .use(remarkGfm)
+        .use(remarkRehype, { allowDangerousHtml: true })
+        .use(rehypeRaw)
+        .use(rehypeStringify)
         .process(content);
+
     const contentHtml = processedContent.toString();
 
     return {
