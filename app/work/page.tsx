@@ -68,7 +68,7 @@ export default function Work() {
             </div>
 
             <div className="flex z-10 flex-col group items-center justify-center h-full w-2/5  rounded-xl relative">
-                <div className="relative flex w-2/3 items-center justify-center group-hover:blur-md group-hover:opacity-20 group-hover:scale-90 [transition:all_0.4s_cubic-bezier(0.76,0,0.24,1)]">
+                <div className="relative flex w-3/4 items-center justify-center group-hover:blur-md group-hover:opacity-20 group-hover:scale-90 [transition:all_0.4s_cubic-bezier(0.76,0,0.24,1)]">
                     <Image src={xequal} alt="X Equal" className=" rotate-90  " />
 
                     <div className="absolute w-full h-fit flex z-20 items-center justify-center flex-col p-6">
