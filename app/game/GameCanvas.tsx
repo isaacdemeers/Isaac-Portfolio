@@ -5,6 +5,7 @@ import rough from 'roughjs';
 import { useGameLogic } from './useGameLogic';
 import { GameState } from './types';
 import { fontSpaceMono } from '@/lib/font';
+import NavLink from '@/components/NavLink';
 export default function GameCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -184,7 +185,8 @@ export default function GameCanvas() {
     <div ref={containerRef} className="absolute flex flex-col justify-center items-end w-full h-full ">
       <div className={`${fontSpaceMono.className} absolute top-3/5 gap-2 right-20  p-20 pr-0 opacity-0 hover:opacity-100 transition-opacity duration-300 -translate-y-1/2 flex flex-col items-end text-xs font-bold uppercase`}>
         <span>the useless score</span>
-        <span>{'->'} {gameState.score}</span>
+        <span className='mb-4'>{'->'} {gameState.score}</span>
+        <NavLink href="https://clicker.demeerseman.com/" active={true} type="Link">play a game</NavLink>
       </div>
       <canvas
         ref={canvasRef}
