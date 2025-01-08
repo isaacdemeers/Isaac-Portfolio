@@ -31,7 +31,7 @@ export default async function ProjectPage({ params }: { params: { id: string } }
         <main className="min-h-screen w-screen flex flex-col items-start justify-center p-20">
             <NavLink href="/work" active={true} type="back">Go back</NavLink>
 
-            <div className={`${fontCormorant.className} min-w-[500px] flex z-10 flex-col items-center justify-center gap-10 w-full h-[calc(100vh-100px)] p-10`}>
+            <div className={`${fontCormorant.className} min-w-[500px] flex z-10 flex-col items-center justify-center gap-10 w-full h-[calc(100vh-100px)] p-10 pb-20`}>
                 <h1 className="text-8xl">{project.title}</h1>
                 <p className={`${fontManrope.className} text-lg text-center`}>{project.description}</p>
 

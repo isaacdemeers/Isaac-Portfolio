@@ -30,7 +30,7 @@
   }
 
   .prose code {
-    @apply bg-slate-100 px-1 py-0.5 rounded text-sm;
+    @apply bg-slate-200 px-1 py-0.5 rounded text-sm;
   }
 
   .prose pre code {

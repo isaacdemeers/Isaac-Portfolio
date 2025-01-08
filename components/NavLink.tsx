@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 export default function NavLink({ href, children, active, type }: { href: string, children: React.ReactNode, active: boolean, type: string }) {
     const router = useRouter();
     const style = {
-        link: `${fontSpaceMono.className} text-black font-normal uppercase text-sm  transition-transform duration-100`,
+        link: `${fontSpaceMono.className} text-black font-normal uppercase text-sm   transition-transform duration-100`,
     }
 
     const handleClick = (e: React.MouseEvent) => {
