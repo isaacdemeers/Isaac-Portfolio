@@ -14,13 +14,14 @@ interface Project {
     mdFile: string;
     duration: number;
     finished: boolean;
+
 }
 
 const projects: Project[] = [
     {
         id: 1,
-        title: 'MMI Calendar',
-        description: "This is only a exemple of a project's page. The data below is only the README.md file of the project. Real data will be added later.",
+        title: 'PlanIt',
+        description: "A Progressive Web Application for Event Management and Collaboration",
         image: cv.src,
         tags: ['NEXTJS', 'DOCKER', 'PHP'],
         source: '/work/project/1',
@@ -28,9 +29,10 @@ const projects: Project[] = [
         keywords: '',
         year: 2024,
         month: 12,
-        mdFile: 'projet-1.md',
-        duration: 2,
-        finished: false,
+        mdFile: 'planit.md',
+        duration: 4,
+        finished: true,
+
     }
     // {
     //     id: 1,

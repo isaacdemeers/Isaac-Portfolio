@@ -4,6 +4,7 @@ import NavLink from "@/components/NavLink";
 import { fontManrope, fontCormorant, fontSpaceMono } from "@/lib/font";
 import { getProjectContent } from "@/lib/mdUtils";
 import ScrollToTop from "@/components/ScrollToTop";
+import Link from "next/link";
 
 // Générer les paramètres statiques pour chaque projet
 export async function generateStaticParams() {
@@ -29,13 +30,19 @@ export default async function ProjectPage({ params }: { params: { id: string } }
 
     return (
         <main className="min-h-screen w-screen flex flex-col items-start justify-center p-20">
+
+            <div className="fixed top-0 left-0 w-full h-14 bg-gradient-to-b from-white to-transparent z-10"></div>
+            <div className="fixed bottom-0 left-0 w-full h-14 bg-gradient-to-t from-white to-transparent z-10"></div>
+
+
+
             <NavLink href="/work" active={true} type="back">Go back</NavLink>
 
             <div className={`${fontCormorant.className} min-w-[500px] flex z-10 flex-col items-center justify-center gap-10 w-full h-[calc(100vh-100px)] p-10 pb-20`}>
                 <h1 className="text-8xl">{project.title}</h1>
                 <p className={`${fontManrope.className} text-lg text-center`}>{project.description}</p>
 
-                <div className="flex flex-col gap-4 items-start justify-center mt-4">
+                <div className="flex flex-col gap-6 items-start justify-center mt-4">
                     <ul className={`${fontSpaceMono.className} flex flex-row gap-2`}>
                         <li className={`${fontSpaceMono.className} text-sm`}>Developed with</li>
 
@@ -58,6 +65,8 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                     <p className={`${fontSpaceMono.className} text-sm`}>{project.readTime} min read</p>
 
 
+
+
                 </div>
             </div>
             <article
@@ -72,6 +81,10 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                 dangerouslySetInnerHTML={{ __html: projectContent.contentHtml }}
             />
             <ScrollToTop />
+
+            <div className="w-full h-40 flex items-start flex-col justify-center  mt-10">
+                <NavLink href="/work" active={true} type="back">Go back</NavLink>
+            </div>
         </main>
     );
 } 

@@ -48,6 +48,9 @@ export default function Home() {
             <NavLink href="https://github.com/isaacdemeers" active={true} type="Link">github</NavLink>
 
           </ul>
+          <section className=" w-fit flex items-center justify-center">
+            <h1 className={`${fontManrope.className} text-sm font-light flex items-center justify-center gap-2 opacity-50`}>Last updated <span className="w-px p-px h-px flex items-center justify-center bg-slate-900 rounded-full"></span> 08/01/2025</h1>
+          </section>
         </div>
 
 
