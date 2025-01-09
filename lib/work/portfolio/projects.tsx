@@ -1,4 +1,5 @@
-import cv from "@/public/project1.webp";
+import planit from "@/public/projects/planit-preview.png";
+import ginventory from "@/public/projects/ginventory-preview.png";
 
 interface Project {
     id: number;
@@ -22,7 +23,7 @@ const projects: Project[] = [
         id: 1,
         title: 'PlanIt',
         description: "A Progressive Web Application for Event Management and Collaboration",
-        image: cv.src,
+        image: planit.src,
         tags: ['NEXTJS', 'DOCKER', 'PHP'],
         source: '/work/project/1',
         readTime: 5,
@@ -31,6 +32,23 @@ const projects: Project[] = [
         month: 12,
         mdFile: 'planit.md',
         duration: 4,
+        finished: true,
+
+    },
+
+    {
+        id: 2,
+        title: 'Ginventory',
+        description: "A remake of the game 'Ginventory' website. For training purpose only.",
+        image: ginventory.src,
+        tags: ['NEXTJS', 'TAILWIND', 'TYPESCRIPT'],
+        source: '/work/project/2',
+        readTime: 1,
+        keywords: '',
+        year: 2024,
+        month: 12,
+        mdFile: 'ginventory.md',
+        duration: 1,
         finished: true,
 
     }

@@ -31,8 +31,7 @@ export default async function ProjectPage({ params }: { params: { id: string } }
     return (
         <main className="min-h-screen w-screen flex flex-col items-start justify-center p-20">
 
-            <div className="fixed top-0 left-0 w-full h-14 bg-gradient-to-b from-white to-transparent z-10"></div>
-            <div className="fixed bottom-0 left-0 w-full h-14 bg-gradient-to-t from-white to-transparent z-10"></div>
+
 
 
 
