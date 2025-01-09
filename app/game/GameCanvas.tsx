@@ -185,8 +185,9 @@ export default function GameCanvas() {
     <div ref={containerRef} className="absolute flex flex-col justify-center items-end w-full h-full ">
       <div className={`${fontSpaceMono.className} absolute top-3/5 gap-2 right-20  p-20 pr-0 opacity-0 hover:opacity-100 transition-opacity duration-300 -translate-y-1/2 flex flex-col items-end text-xs font-bold uppercase`}>
         <span>the useless score</span>
-        <span className='mb-4'>{'->'} {gameState.score}</span>
-        <NavLink href="https://clicker.demeerseman.com/" active={true} type="Link">play a game</NavLink>
+        <span>{'->'} {gameState.score}</span>
+        <NavLink href="https://clicker.demeerseman.com" active={true} type="Link">Want to play ?</NavLink>
+
       </div>
       <canvas
         ref={canvasRef}

@@ -15,7 +15,8 @@ export default function NavLink({ href, children, active, type, className }: {
 }) {
     const router = useRouter();
     const style = {
-        link: `${fontSpaceMono.className} text-black font-normal uppercase text-sm  transition-transform duration-100`,
+        link: `${fontSpaceMono.className} text-black font-normal uppercase text-sm   transition-transform duration-100`,
+        linkActive: `${fontSpaceMono.className} text-black font-normal uppercase text-sm   transition-transform duration-100`,
     }
 
     const handleClick = (e: React.MouseEvent) => {
