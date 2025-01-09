@@ -187,6 +187,7 @@ export default function GameCanvas() {
         <span>the useless score</span>
         <span>{'->'} {gameState.score}</span>
         <NavLink href="https://clicker.demeerseman.com" active={true} type="Link">Want to play ?</NavLink>
+
       </div>
       <canvas
         ref={canvasRef}

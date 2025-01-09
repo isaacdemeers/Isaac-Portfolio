@@ -4,7 +4,15 @@ import { fontSpaceMono } from '@/lib/font';
 import { ExternalLink, LinkIcon } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
-export default function NavLink({ href, children, active, type }: { href: string, children: React.ReactNode, active: boolean, type: string }) {
+let navTypes = {}
+
+export default function NavLink({ href, children, active, type, className }: {
+    href: string;
+    children: React.ReactNode;
+    active: boolean;
+    type: string;
+    className?: string;
+}) {
     const router = useRouter();
     const style = {
         link: `${fontSpaceMono.className} text-black font-normal uppercase text-sm   transition-transform duration-100`,
@@ -27,7 +35,7 @@ export default function NavLink({ href, children, active, type }: { href: string
     }
 
     return (
-        <li className="flex items-center gap-2 group">
+        <li className={`${className} flex items-center gap-2 `}>
             {arrow}
             <a
                 href={href}
