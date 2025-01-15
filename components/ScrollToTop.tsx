@@ -35,7 +35,7 @@ export default function ScrollToTop() {
 
             <button
                 onClick={scrollToTop}
-                className={`fixed bottom-8 right-8 bg-slate-900 shadow-lg text-white p-3 rounded-2xl hover:bg-slate-800 transition-all duration-500 z-50 ${isVisible ? 'opacity-100 blur-0 scale-100' : ' opacity-0 blur-lg scale-0'}`}
+                className={`fixed bottom-8 right-8 bg-slate-900 shadow-lg text-white p-3  hover:bg-slate-800 transition-all duration-500 z-50 ${isVisible ? 'opacity-100 blur-0 scale-100 rounded-2xl' : ' opacity-0 blur-lg scale-0 rounded-3xl'}`}
                 aria-label="Retour en haut"
             >
                 <ArrowUpIcon className="w-6 h-6" />
