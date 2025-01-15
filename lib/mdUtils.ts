@@ -8,8 +8,8 @@ import remarkRehype from 'remark-rehype';
 import rehypeRaw from 'rehype-raw';
 import rehypeStringify from 'rehype-stringify';
 
-export async function getProjectContent(mdFile: string) {
-    const fullPath = path.join(process.cwd(), 'content/projects', mdFile);
+export async function getProjectContent(mdFile: string, folder = 'projects') {
+    const fullPath = path.join(process.cwd(), `content/${folder}`, mdFile);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     // Utiliser gray-matter pour parser le markdown

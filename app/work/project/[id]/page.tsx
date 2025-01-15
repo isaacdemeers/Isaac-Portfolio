@@ -5,6 +5,8 @@ import { fontManrope, fontCormorant, fontSpaceMono } from "@/lib/font";
 import { getProjectContent } from "@/lib/mdUtils";
 import ScrollToTop from "@/components/ScrollToTop";
 import Link from "next/link";
+import Tag from "@/components/Tag";
+import { BadgeInfo } from "lucide-react";
 
 // Générer les paramètres statiques pour chaque projet
 export async function generateStaticParams() {
@@ -54,19 +56,27 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                             <>
                                 <li className={`${fontSpaceMono.className} text-sm`}>Ended : {project.month}/{project.year}</li>
                                 <li className={`${fontSpaceMono.className} text-sm`}>Duration : {project.duration} months</li>
-                                <p className={`${fontSpaceMono.className} text-sm px-2 cursor-default bg-slate-900 text-white rounded-lg w-fit`}>Finished</p>
+                                <Tag text="Finished" className="w-fit" />
                             </>
                         ) : (
-                            <p className={`${fontSpaceMono.className} text-sm px-2 cursor-default bg-slate-900 text-white rounded-lg w-fit`}>In progress</p>
+                            <Tag text="In progress" className="w-fit" />
                         )}
 
                     </ul>
                     <p className={`${fontSpaceMono.className} text-sm`}>{project.readTime} min read</p>
 
 
-
+                    <div className=" bg-slate-200 border border-slate-300 flex items-start flex-col justify-start rounded-2xl p-4 gap-2 mt-10">
+                        <div className="flex items-center gap-2">
+                            <BadgeInfo size={16} className="text-slate-900" />
+                            <h2 className={`${fontManrope.className} text-md`}>Note</h2>
+                        </div>
+                        <p className={`${fontSpaceMono.className} text-sm`}>Images will be added soon</p>
+                    </div>
 
                 </div>
+
+
             </div>
             <article
                 className={`

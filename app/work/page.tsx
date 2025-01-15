@@ -59,7 +59,7 @@ export default function Work() {
                     <ul className={`${fontSpaceMono.className} flex flex-col items-start`}>
                         <NavLink href="https://www.linkedin.com/in/isaac-demeerseman-8701b6247/" active={true} type="Link">Linkedin</NavLink>
                         <NavLink href="https://github.com/isaacdemeers" active={true} type="Link">Github</NavLink>
-                        <NavLink href="https://mmi.unilim.fr/~demeerseman1/Portfolio-competences/dist/" active={true} type="Link">Portfolio de compétences</NavLink>
+                        <NavLink href="/work" active={false} type="arrow">Studies portfolio</NavLink>
                         <NavLink href="/work/cv" active={true} type="arrow">CV</NavLink>
 
 
@@ -89,7 +89,7 @@ export default function Work() {
                             <li key={index} className=" p-2 cursor-pointer relative origin-right rounded-xl w-72 h-fit bg-slate-100 bg-opacity-50 backdrop-blur-sm border-2 border-slate-200  translate-x-5 opacity-0 blur-lg group-hover:translate-x-0 group-hover:scale-100 scale-90 group-hover:opacity-100 group-hover:blur-0 hover:bg-slate-200 [transition:all_0.2s_cubic-bezier(0.76,0,0.24,1)]">
                                 <div className="absolute top-0 -translate-x-full w-20 h-full flex flex-col items-end justify-start ">
                                     {/* <p className={`${fontSpaceMono.className} text-3xl text-slate-900 text-end font-bold uppercase pr-4`}>{item.id.toString().padStart(2, '0')}</p> */}
-                                    <p className={`${fontSpaceMono.className} text-xs text-slate-900 text-end uppercase -rotate-90  rounded-md pr-6 pt-2`}>{item.year}</p>
+                                    <p className={`${fontSpaceMono.className} text-xs text-slate-900 text-end uppercase -rotate-90  rounded-md pr-6 pt-2`}>{item.month}.{item.year}</p>
                                 </div>
                                 <Link href={`/work/project/${item.id}`} className="flex items-start  justify-center flex-col" >
                                     <h3 className={` ${fontManrope.className} font-black text-lg`}>{item.title}</h3>
@@ -107,7 +107,13 @@ export default function Work() {
                                 </Link>
                             </li>
 
+
                         ))}
+
+                        <li className="flex items-center justify-center p-2 cursor-default relative origin-right rounded-xl w-72 h-fit  bg-opacity-50 backdrop-blur-sm border-2 border-slate-200  translate-x-5 opacity-0 blur-lg group-hover:translate-x-0 group-hover:scale-100 scale-90 group-hover:opacity-100 group-hover:blur-0 bg-slate-200 [transition:all_0.2s_cubic-bezier(0.76,0,0.24,1)]">
+
+                            <p className="text-sm text-center">My other projects are currently being added and will be available soon</p>
+                        </li>
                     </ul>
                 </section>
 
