@@ -3,7 +3,7 @@ import NavLink from "@/components/NavLink";
 import { fontManrope, fontCormorant, fontSpaceMono } from "@/lib/font";
 import { getProjectContent } from "@/lib/mdUtils";
 import ScrollToTop from "@/components/ScrollToTop";
-import Link from "next/link";
+import { Link } from "lucide-react";
 
 
 
@@ -27,14 +27,25 @@ export default async function ProjectPage() {
 
             <section className={`${fontCormorant.className} min-w-[500px] flex z-10 flex-col items-center justify-center gap-10 w-full h-[calc(100vh-100px)] p-10 pb-20`}>
 
-                <h1 className="text-7xl text-center">Isaac Demeerseman</h1>
-                <p className={`${fontManrope.className} text-lg text-center w-full`}>Portfolio de compétences</p>
+                <h1 className="text-9xl text-center leading-4">Isaac <br /> <br />  <span className={`${fontSpaceMono.className} text-6xl font-extralight tracking-[10px]  text-slate-200 uppercase`}> Demeerseman</span> </h1>
+                <p className={`${fontManrope.className} text-lg text-center w-full`}>Portfolio de compétences pour l'année 2024 / 2025.
+                    <br />
+                    3eme année de BUT Métiers du multimédia et de l'internet.
+                </p>
 
-                <ul>
-                    <NavLink href="/work/studies-portfolio" active={true} type="arrow">SAÉ 501</NavLink>
-                    <NavLink href="/work/studies-portfolio" active={true} type="arrow">SAÉ 502</NavLink>
 
-                </ul>
+                <div className=" bg-slate-200 border border-slate-300 flex items-start flex-col justify-start rounded-2xl w-60 p-4 gap-4 mt-10">
+                    <div className="flex items-center gap-2">
+                        <Link size={16} className="text-slate-900" />
+                        <h2 className={`${fontManrope.className} text-md`}>Quick links</h2>
+                    </div>
+                    <ul>
+                        <NavLink href="/work/studies-portfolio/developper" active={true} type="arrow">DÉVELOPPER</NavLink>
+                        <NavLink href="/work/studies-portfolio/entreprendre" active={true} type="arrow">ENTREPRENDRE</NavLink>
+                        <NavLink href="/work/studies-portfolio/stage" active={true} type="arrow">STAGE</NavLink>
+
+                    </ul>
+                </div>
             </section>
 
 
