@@ -54,8 +54,8 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                     <ul className={`${fontSpaceMono.className} flex flex-col gap-2`}>
                         {project.finished ? (
                             <>
-                                <li className={`${fontSpaceMono.className} text-sm`}>Ended : {project.month}/{project.year}</li>
-                                <li className={`${fontSpaceMono.className} text-sm`}>Duration : {project.duration} months</li>
+                                <li className={`${fontSpaceMono.className} text-sm`}>Ended : {project.month}.{project.year}</li>
+                                <li className={`${fontSpaceMono.className} text-sm`}>Duration : {project.duration} month{project.duration > 1 ? 's' : ''}</li>
                                 <Tag text="Finished" className="w-fit" />
                             </>
                         ) : (

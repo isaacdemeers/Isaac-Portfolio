@@ -35,7 +35,7 @@ export default function NavLink({ href, children, active, type, className }: {
     }
 
     return (
-        <li className={`${className} flex items-center gap-2 `}>
+        <li className={`${className} group flex items-center gap-2 transition-transform duration-100`}>
             {arrow}
             <a
                 href={href}

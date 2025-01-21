@@ -59,7 +59,7 @@ export default function Work() {
                     <ul className={`${fontSpaceMono.className} flex flex-col items-start`}>
                         <NavLink href="https://www.linkedin.com/in/isaac-demeerseman-8701b6247/" active={true} type="Link">Linkedin</NavLink>
                         <NavLink href="https://github.com/isaacdemeers" active={true} type="Link">Github</NavLink>
-                        <NavLink href="/work" active={false} type="arrow">Studies portfolio</NavLink>
+                        <NavLink href="/work/studies-portfolio" active={false} type="arrow">Studies portfolio</NavLink>
                         <NavLink href="/work/cv" active={true} type="arrow">CV</NavLink>
 
 
