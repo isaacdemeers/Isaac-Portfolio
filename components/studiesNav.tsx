@@ -44,23 +44,18 @@ export default function StudiesNav() {
             disabled: false,
             pages: [
                 {
-                    title: "Sujet",
-                    href: "/work/studies-portfolio/developper/sae-501",
+                    title: "PlanIt",
+                    href: "/work/studies-portfolio/developper/1",
                     disabled: false,
 
                 },
                 {
-                    title: "Saé 501",
-                    href: "/work/studies-portfolio/developper/sae-503",
+                    title: "Downtale",
+                    href: "/work/studies-portfolio/developper/2",
                     disabled: false,
 
                 },
-                {
-                    title: "Saé 502",
-                    href: "/work/studies-portfolio/developper/sae-503",
-                    disabled: false,
 
-                }
             ]
         },
         {
@@ -70,14 +65,14 @@ export default function StudiesNav() {
 
             pages: [
                 {
-                    title: "SAÉ 502",
-                    href: "/work/studies-portfolio/entreprendre/sae-502",
+                    title: "PlanIt",
+                    href: "/work/studies-portfolio/entreprendre/1",
                     disabled: false,
 
                 },
                 {
-                    title: "SAÉ 504",
-                    href: "/work/studies-portfolio/entreprendre/sae-504",
+                    title: "Downtale",
+                    href: "/work/studies-portfolio/entreprendre/2",
                     disabled: false,
 
                 }
@@ -86,16 +81,16 @@ export default function StudiesNav() {
         {
             title: "Stage",
             href: "/work/studies-portfolio/stage",
-            disabled: true,
+            disabled: false,
             pages: [
                 {
                     title: "Mémoire",
-                    href: "/work/studies-portfolio/stage/sae-505",
+                    href: "/work/studies-portfolio/stage/1",
                     disabled: true
                 },
                 {
                     title: "Déroulement",
-                    href: "/work/studies-portfolio/stage/sae-506",
+                    href: "/work/studies-portfolio/stage/2",
                     disabled: true,
 
                 }

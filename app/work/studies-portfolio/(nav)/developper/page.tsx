@@ -12,7 +12,7 @@ import { Link } from "lucide-react";
 export default async function ProjectPage() {
 
 
-    const projectContent = await getProjectContent("main.md", "studies");
+    const projectContent = await getProjectContent("dev.md", "studies");
     if (!projectContent) {
         notFound();
     }
@@ -23,29 +23,16 @@ export default async function ProjectPage() {
 
 
 
-            <NavLink href="/work" active={true} type="back">Go back</NavLink>
+            <NavLink href="/work/studies-portfolio" active={true} type="back">Go back</NavLink>
 
-            <section className={`${fontCormorant.className} min-w-[500px] flex z-10 flex-col items-center justify-center gap-10 w-full h-[calc(100vh-100px)] p-10 pb-20`}>
+            <section className={`min-w-[500px] flex z-10 flex-col items-center justify-center gap-10 w-full h-[calc(100vh-100px)] p-10 pb-20`}>
 
-                <h1 className="text-9xl text-center leading-10">Isaac <br /> <br />  <span className={`${fontSpaceMono.className} text-6xl font-extralight  text-slate-900 uppercase`}> Demeerseman</span> </h1>
-                <p className={`${fontManrope.className} text-lg text-center w-full`}>Portfolio de compétences pour l'année 2024 / 2025.
-                    <br />
-                    3eme année de BUT Métiers du multimédia et de l'internet.
+                <h1 className={`${fontSpaceMono} text-9xl text-center uppercase`}>Développer,</h1>
+                <p className={`${fontManrope.className} text-lg text-center w-full`}>pour le web et les médias numériques.
                 </p>
 
 
-                <div className=" bg-slate-200 border border-slate-300 flex items-start flex-col justify-start rounded-2xl w-60 p-4 gap-4 mt-10">
-                    <div className="flex items-center gap-2">
-                        <Link size={16} className="text-slate-900" />
-                        <h2 className={`${fontManrope.className} text-md`}>Liens Rapides</h2>
-                    </div>
-                    <ul>
-                        <NavLink href="/work/studies-portfolio/developper" active={true} type="arrow">DÉVELOPPER</NavLink>
-                        <NavLink href="/work/studies-portfolio/entreprendre" active={true} type="arrow">ENTREPRENDRE</NavLink>
-                        <NavLink href="/work/studies-portfolio/stage" active={true} type="arrow">STAGE</NavLink>
 
-                    </ul>
-                </div>
             </section>
 
 
@@ -63,7 +50,7 @@ export default async function ProjectPage() {
             <ScrollToTop />
 
             <div className="w-full h-40 flex items-start flex-col justify-center  mt-10">
-                <NavLink href="/work" active={true} type="back">Go back</NavLink>
+                <NavLink href="/work/studies-portfolio" active={true} type="back">Go back</NavLink>
             </div>
         </main>
     );
