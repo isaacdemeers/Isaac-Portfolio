@@ -79,3 +79,15 @@ body {
   opacity: 0;
   transition: opacity 500ms ease-in-out;
 }
+
+.noscroll {
+
+  /* hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* hide scrollbar for chrome, safari and opera */
+.noscroll::-webkit-scrollbar {
+  display: none;
+}

@@ -4,6 +4,7 @@ import GameCanvas from './game/GameCanvas';
 import { fontRadley, fontSpaceMono, fontCormorant, fontManrope } from '@/lib/font';
 import NavLink from '@/components/NavLink';
 import { motion } from 'framer-motion';
+import { Separator } from '@/components/ui/separator';
 
 export default function Home() {
 
@@ -46,6 +47,10 @@ export default function Home() {
             <NavLink href="/work" active={true} type="arrow">work</NavLink>
 
             <NavLink href="https://github.com/isaacdemeers" active={true} type="Link">github</NavLink>
+
+            <Separator className="bg-slate-300 h-px w-10 my-4" />
+
+            <NavLink href="/work/cv" active={true} type="arrow" className='border border-slate-800 rounded-lg px-2 py-1'>Contact me</NavLink>
 
           </ul>
           <section className=" w-fit flex items-center justify-center">

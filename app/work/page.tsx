@@ -63,6 +63,8 @@ export default function Work() {
                         <NavLink href="/work/cv" active={true} type="arrow">CV</NavLink>
 
 
+
+
                     </ul>
                 </div>
             </div>

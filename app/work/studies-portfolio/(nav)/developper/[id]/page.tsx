@@ -37,7 +37,6 @@ export default async function ProjectPage({ params }: { params: { id: string } }
 
 
 
-            <NavLink href="/work" active={true} type="back">Go back</NavLink>
 
             <div className={`${fontCormorant.className} min-w-[500px] flex z-10 flex-col items-center justify-center gap-10 w-full h-[calc(100vh-100px)] p-10 pb-20`}>
                 <h1 className="text-8xl">{project.title}</h1>
