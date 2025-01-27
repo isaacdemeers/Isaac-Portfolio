@@ -5,7 +5,7 @@ import { ArrowDown } from 'lucide-react';
 
 
 export default function ShowScroll() {
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
 
 
     const toggleVisibility = () => {
@@ -26,7 +26,7 @@ export default function ShowScroll() {
 
     return (
 
-        <div className={`text-indigo-400  ${isVisible ? 'opacity-100 blur-0 translate-y-24' : ' opacity-0 blur-lg translate-y-36'} transition-all duration-1000 `}>
+        <div className={`text-emerald-500  ${isVisible ? 'opacity-100 blur-0 translate-y-24' : ' opacity-0 blur-lg translate-y-36'} transition-all duration-1000 `}>
             <ArrowDown />
         </div>
     )

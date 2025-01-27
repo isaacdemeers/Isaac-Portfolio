@@ -6,17 +6,20 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --bga: 255, 244, 234;
 }
 
 @layer components {
   .prose {
     @apply prose-headings:text-slate-900;
-    @apply prose-a:text-blue-600 prose-a:no-underline hover:prose-a:text-blue-800 hover:prose-a:underline;
+    @apply prose-a:text-emerald-600 prose-a:no-underline hover:prose-a:text-emerald-800 hover:prose-a:underline;
     @apply prose-strong:text-slate-900;
     @apply prose-code:text-slate-900;
     @apply prose-pre:bg-slate-100;
     @apply prose-pre:p-4 prose-pre:rounded-lg;
   }
+
+
 
   /* Masquer les backticks autour du code */
   .prose code::before,

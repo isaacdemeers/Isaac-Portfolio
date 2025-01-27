@@ -42,7 +42,7 @@ export default async function ProjectPage({ params }: { params: { id: string } }
 
 
 
-            <main className="h-screen w-screen flex items-center justify-start bg-slate-100 p-10">
+            <main className="h-screen w-screen flex items-center justify-start p-10">
                 <div className="flex z-10 flex-col items-center justify-center  h-full w-3/5 ">
                     <div className={`${fontCormorant.className} text-7xl flex  flex-col  gap-10`}>
                         <NavLink href="/work" active={true} type="back">Go back</NavLink>

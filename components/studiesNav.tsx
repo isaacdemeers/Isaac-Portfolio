@@ -16,7 +16,7 @@ interface NavLinkProps {
 
 function NavLink({ href, disabled, catDisabled, children, className }: NavLinkProps) {
 
-    let styles = 'w-full flex items-center justify-start rounded-lg hover:bg-slate-200 transition-all duration-150 px-3 py-1 text-slate-600 ml-2'
+    let styles = 'w-full flex items-center justify-start rounded-lg hover:bg-emerald-600 hover:bg-opacity-40 transition-all duration-150 px-3 py-1 text-neutral-600 px-2'
 
     let disabledStyles = 'text-slate-300 bg-slate-100 hover:bg-slate-100 cursor-default'
 
@@ -101,13 +101,13 @@ export default function StudiesNav() {
 
 
     return (
-        <nav className="flex fixed flex-row items-start justify-center gap-4 top-0 left-0 w-1/5 py-20 px-10  h-full bg-slate-100 border border-slate-200 text-white">
+        <nav className="flex fixed flex-row items-start justify-center gap-4 top-0 left-0 w-1/5  px-10  h-full bg-[#fbeddf] border border-[#f7d6b6] text-white">
 
-            <ul className="flex flex-col  gap-6 w-full h-full rounded-lg overflow-scroll noscroll ">
+            <ul className="flex flex-col  gap-6 w-full h-full rounded-lg overflow-scroll noscroll py-20 ">
 
-                <Link href='/work/studies-portfolio' className={`w-full flex items-center text-xl justify-start rounded-lg px-3 py-1 hover:bg-slate-200 transition-all duration-200  text-slate-900`} ><Home size={18} className="mr-2" /> Home</Link>
+                <Link href='/work/studies-portfolio' className={`w-full flex items-center text-xl justify-start rounded-lg px-3 py-1 hover:bg-emerald-600 hover:bg-opacity-40 transition-all duration-200  text-slate-900`} ><Home size={18} className="mr-2" /> Home</Link>
 
-                <Separator className="h-px w-full bg-slate-300" />
+                <Separator className="h-px w-full bg-[#f7d6b6]" />
 
                 {PAGES.map((page) => (
                     <li key={page.title} className="flex flex-col gap-2 w-full h-fit">
@@ -120,7 +120,7 @@ export default function StudiesNav() {
                     </li>
                 ))}
 
-                <Separator className="h-px w-full bg-slate-300" />
+                <Separator className="h-px w-full bg-[#f7d6b6]" />
 
                 {PAGES.map((page) => (
                     <li key={page.title} className="flex flex-col gap-2 w-full h-fit">

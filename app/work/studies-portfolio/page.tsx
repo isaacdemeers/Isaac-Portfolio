@@ -36,7 +36,7 @@ export default async function ProjectPage() {
                     </p>
 
 
-                    <div className=" bg-slate-200 border border-slate-300 flex items-start flex-col justify-start rounded-2xl w-60 p-4 gap-4 mt-10">
+                    <div className=" bg-[#fbeddf] border border-[#f7d6b6] flex items-start flex-col justify-start rounded-2xl w-60 p-4 gap-4 mt-10">
                         <div className="flex items-center gap-2">
                             <Link size={16} className="text-slate-900" />
                             <h2 className={`${fontManrope.className} text-md`}>Liens Rapides</h2>

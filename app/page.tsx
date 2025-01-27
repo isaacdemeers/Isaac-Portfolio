@@ -28,7 +28,7 @@ export default function Home() {
     // </main>
 
 
-    <main className="h-screen w-screen flex items-center justify-start bg-slate-100">
+    <main className="h-screen w-screen flex items-center justify-start ">
 
       <div className="flex z-10 flex-col items-center justify-center h-full w-3/5 ml-10">
         <div className={`${fontCormorant.className} text-7xl flex flex-col  gap-10`}>
@@ -50,7 +50,7 @@ export default function Home() {
 
             <Separator className="bg-slate-300 h-px w-10 my-4" />
 
-            <NavLink href="/work/cv" active={true} type="arrow" className='border border-slate-800 rounded-lg px-2 py-1'>Contact me</NavLink>
+            <NavLink href="/work/cv" active={true} type="arrow" className='border border-emerald-600 rounded-lg px-2 py-1'>Contact me</NavLink>
 
           </ul>
           <section className=" w-fit flex items-center justify-center">
