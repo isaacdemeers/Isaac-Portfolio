@@ -15,8 +15,8 @@ export default function NavLink({ href, children, active, type, className }: {
 }) {
     const router = useRouter();
     const style = {
-        link: `${fontSpaceMono.className} text-black font-normal uppercase text-sm   transition-transform duration-100`,
-        linkActive: `${fontSpaceMono.className} text-black font-normal uppercase text-sm   transition-transform duration-100`,
+        link: `${fontSpaceMono.className} font-normal uppercase text-sm   transition-transform duration-100`,
+        linkActive: `${fontSpaceMono.className} font-normal uppercase text-sm   transition-transform duration-100`,
     }
 
     const handleClick = (e: React.MouseEvent) => {
@@ -28,19 +28,19 @@ export default function NavLink({ href, children, active, type, className }: {
 
     let arrow = null;
     if (type === 'arrow' || type === 'Link') {
-        arrow = <p className={`${active ? 'text-black group-hover:translate-x-1' : 'text-gray-600'} ${fontSpaceMono.className} font-bold uppercase text-sm  transition-transform duration-100`}>{'->'}</p>
+        arrow = <p className={`${active ? 'text-emerald-600 group-hover:translate-x-1' : 'text-gray-600'} ${fontSpaceMono.className} font-bold uppercase text-sm  transition-transform duration-100`}>{'->'}</p>
     }
     else if (type === 'back') {
-        arrow = <p className={`${active ? 'text-black group-hover:-translate-x-1' : 'text-gray-600'} ${fontSpaceMono.className} font-bold uppercase text-sm  transition-transform duration-100`}>{'<-'}</p>
+        arrow = <p className={`${active ? 'text-emerald-600 group-hover:-translate-x-1' : 'text-gray-600'} ${fontSpaceMono.className} font-bold uppercase text-sm  transition-transform duration-100`}>{'<-'}</p>
     }
 
     return (
-        <li className={`${className} flex items-center gap-2 `}>
+        <li className={`${className} group flex items-center gap-2 transition-transform duration-100`}>
             {arrow}
             <a
                 href={href}
                 onClick={handleClick}
-                className={`${active ? 'group-hover:underline cursor-pointer' : ' cursor-default line-through text-slate-600'} ${style.link} flex items-center gap-1`}
+                className={`${active ? 'group-hover:underline cursor-pointer text-emerald-600' : ' cursor-default line-through text-slate-600'} ${style.link} flex items-center gap-1`}
             >
                 {children}
                 {type == 'Link' && <ExternalLink className="w-3 h-3" />}

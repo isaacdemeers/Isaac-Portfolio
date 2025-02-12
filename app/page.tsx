@@ -4,6 +4,7 @@ import GameCanvas from './game/GameCanvas';
 import { fontRadley, fontSpaceMono, fontCormorant, fontManrope } from '@/lib/font';
 import NavLink from '@/components/NavLink';
 import { motion } from 'framer-motion';
+import { Separator } from '@/components/ui/separator';
 
 export default function Home() {
 
@@ -27,7 +28,7 @@ export default function Home() {
     // </main>
 
 
-    <main className="h-screen w-screen flex items-center justify-start bg-slate-100">
+    <main className="h-screen w-screen flex items-center justify-start ">
 
       <div className="flex z-10 flex-col items-center justify-center h-full w-3/5 ml-10">
         <div className={`${fontCormorant.className} text-7xl flex flex-col  gap-10`}>
@@ -47,9 +48,13 @@ export default function Home() {
 
             <NavLink href="https://github.com/isaacdemeers" active={true} type="Link">github</NavLink>
 
+            <Separator className="bg-emerald-600 opacity-25 h-px w-10 my-4" />
+
+            <NavLink href="/work/cv" active={true} type="arrow" className='border border-emerald-600 rounded-lg px-2 py-1'>Contact me</NavLink>
+
           </ul>
           <section className=" w-fit flex items-center justify-center">
-            <h1 className={`${fontManrope.className} text-sm font-light flex items-center justify-center gap-2 opacity-50`}>Last updated <span className="w-px p-px h-px flex items-center justify-center bg-slate-900 rounded-full"></span> 08/01/2025</h1>
+            <h1 className={`${fontManrope.className} text-sm font-light flex items-center justify-center gap-2 opacity-50`}>Last updated <span className="w-px p-px h-px flex items-center justify-center bg-slate-900 rounded-full"></span> 08.01.2025</h1>
           </section>
         </div>
 

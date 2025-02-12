@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.className} antialiased bg-slate-100`}>
-        <div className="fixed top-0 left-0 w-full h-14 bg-gradient-to-b from-white to-transparent z-50"></div>
-        <div className="fixed bottom-0 left-0 w-full h-14 bg-gradient-to-t from-white to-transparent z-50"></div>
+      <body className={`${spaceGrotesk.className} antialiased bg-[#FFF4EA] overflow-x-hidden`}>
+        <div className="fixed top-0 left-0 w-full h-14 bg-gradient-to-b from-[#FFF4EA] to-transparent z-50"></div>
+        <div className="fixed bottom-0 left-0 w-full h-14 bg-gradient-to-t from-[#FFF4EA] to-transparent z-50 "></div>
         <Loader />
         {children}
       </body>

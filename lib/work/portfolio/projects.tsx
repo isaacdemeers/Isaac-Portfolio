@@ -51,7 +51,9 @@ const projects: Project[] = [
         duration: 1,
         finished: true,
 
-    }
+    },
+
+    
     // {
     //     id: 1,
     //     title: 'MMI Calendar',

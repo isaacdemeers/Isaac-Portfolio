@@ -33,7 +33,7 @@ export default function Work() {
     };
 
     return (
-        <main className="h-screen w-screen flex items-center justify-start bg-slate-100 p-10">
+        <main className="h-screen w-screen flex items-center justify-start  p-10">
             <div className="flex z-10 flex-col items-center justify-center  h-full w-3/5 ">
                 <div className={`${fontCormorant.className} text-7xl flex  flex-col  gap-10`}>
                     <NavLink href="/" active={true} type="back">Go back</NavLink>
@@ -59,8 +59,10 @@ export default function Work() {
                     <ul className={`${fontSpaceMono.className} flex flex-col items-start`}>
                         <NavLink href="https://www.linkedin.com/in/isaac-demeerseman-8701b6247/" active={true} type="Link">Linkedin</NavLink>
                         <NavLink href="https://github.com/isaacdemeers" active={true} type="Link">Github</NavLink>
-                        <NavLink href="/work" active={false} type="arrow">Studies portfolio</NavLink>
+                        <NavLink href="/work/studies-portfolio" active={false} type="arrow">Studies portfolio</NavLink>
                         <NavLink href="/work/cv" active={true} type="arrow">CV</NavLink>
+
+
 
 
                     </ul>
@@ -69,7 +71,7 @@ export default function Work() {
 
             <div className="flex z-10 flex-col group items-center justify-center h-full w-2/5  rounded-xl relative">
                 <div className="relative flex w-3/4 items-center justify-center group-hover:blur-md group-hover:opacity-20 group-hover:scale-90 [transition:all_0.4s_cubic-bezier(0.76,0,0.24,1)]">
-                    <Image src={xequal} alt="X Equal" className=" rotate-90  " />
+                    <Image src={xequal} alt="X Equal" className=" rotate-90" />
 
                     <div className="absolute w-full h-fit flex z-20 items-center justify-center flex-col p-6">
                         <p className={`${fontManrope.className} text-sm text-center font-bold text-slate-900 uppercase`}>[ Work ]</p>
@@ -81,12 +83,12 @@ export default function Work() {
 
                 </div>
 
-                <section className=" w-full h-full absolute transition-all duration-700">
-                    <ul className="h-full w-full relative flex flex-col items-end justify-start p-4 pr-10 gap-4 overflow-scroll">
+                <section className=" w-full h-full absolute transition-all duration-700 ">
+                    <ul className="h-full w-full relative flex flex-col items-end justify-start overflow-auto scrollbar-hide p-4 pr-10  gap-4 ">
 
                         {projects.map((item, index) => (
 
-                            <li key={index} className=" p-2 cursor-pointer relative origin-right rounded-xl w-72 h-fit bg-slate-100 bg-opacity-50 backdrop-blur-sm border-2 border-slate-200  translate-x-5 opacity-0 blur-lg group-hover:translate-x-0 group-hover:scale-100 scale-90 group-hover:opacity-100 group-hover:blur-0 hover:bg-slate-200 [transition:all_0.2s_cubic-bezier(0.76,0,0.24,1)]">
+                            <li key={index} className=" p-2 cursor-pointer relative origin-right rounded-xl w-72 h-fit bg-[#fbeddf] bg-opacity-50 backdrop-blur-sm border-2 border-[#f7d6b6]  translate-x-5 opacity-0 blur-lg group-hover:translate-x-0 group-hover:scale-100 scale-90 group-hover:opacity-100 hover:bg-[#f7d6b6] group-hover:blur-0 [transition:all_0.2s_cubic-bezier(0.76,0,0.24,1)]">
                                 <div className="absolute top-0 -translate-x-full w-20 h-full flex flex-col items-end justify-start ">
                                     {/* <p className={`${fontSpaceMono.className} text-3xl text-slate-900 text-end font-bold uppercase pr-4`}>{item.id.toString().padStart(2, '0')}</p> */}
                                     <p className={`${fontSpaceMono.className} text-xs text-slate-900 text-end uppercase -rotate-90  rounded-md pr-6 pt-2`}>{item.month}.{item.year}</p>
@@ -95,7 +97,7 @@ export default function Work() {
                                     <h3 className={` ${fontManrope.className} font-black text-lg`}>{item.title}</h3>
                                     <div className="flex items-center justify-start gap-2">
                                         <h4 className="text-gray-600 flex items-center justify-start gap-1"><Clock size={12} /> {item.readTime}</h4>
-                                        <Separator orientation="vertical" className="h-3 w-[1px] bg-slate-300" />
+                                        <Separator orientation="vertical" className="h-3 w-[1px] bg-emerald-600 opacity-25" />
                                         <h4 className="text-gray-600 flex text-xs w-full "> {item.tags.join(', ')}</h4>
                                     </div>
 
@@ -110,7 +112,7 @@ export default function Work() {
 
                         ))}
 
-                        <li className="flex items-center justify-center p-2 cursor-default relative origin-right rounded-xl w-72 h-fit  bg-opacity-50 backdrop-blur-sm border-2 border-slate-200  translate-x-5 opacity-0 blur-lg group-hover:translate-x-0 group-hover:scale-100 scale-90 group-hover:opacity-100 group-hover:blur-0 bg-slate-200 [transition:all_0.2s_cubic-bezier(0.76,0,0.24,1)]">
+                        <li className="flex items-center justify-center p-2 cursor-default relative origin-right rounded-xl w-72 h-fit  bg-opacity-50 backdrop-blur-sm border-2 border-[#f7d6b6]  translate-x-5 opacity-0 blur-lg group-hover:translate-x-0 group-hover:scale-100 scale-90 group-hover:opacity-100 group-hover:blur-0 bg-[#fbeddf]  [transition:all_0.2s_cubic-bezier(0.76,0,0.24,1)]">
 
                             <p className="text-sm text-center">My other projects are currently being added and will be available soon</p>
                         </li>
