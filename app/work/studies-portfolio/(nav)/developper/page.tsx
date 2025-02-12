@@ -23,7 +23,6 @@ export default async function ProjectPage() {
 
 
 
-            <NavLink href="/work/studies-portfolio" active={true} type="back">Go back</NavLink>
 
             <section className={`min-w-[500px] flex z-10 flex-col items-center justify-center gap-10 w-full h-[calc(100vh-100px)] p-10 pb-20`}>
 
@@ -49,9 +48,7 @@ export default async function ProjectPage() {
             />
             <ScrollToTop />
 
-            <div className="w-full h-40 flex items-start flex-col justify-center  mt-10">
-                <NavLink href="/work/studies-portfolio" active={true} type="back">Go back</NavLink>
-            </div>
+
         </main>
     );
 } 

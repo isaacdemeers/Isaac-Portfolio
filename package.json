@@ -72,6 +72,7 @@
     "roughjs": "^4.6.6",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.5.2",
+    "tailwind-scrollbar-hide": "^2.0.0",
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.7",
     "tweakpane": "^4.0.5",

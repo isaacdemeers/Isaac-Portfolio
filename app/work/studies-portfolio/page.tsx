@@ -8,7 +8,6 @@ import StudiesNav from "@/components/studiesNav";
 
 
 
-
 // Page du projet
 export default async function ProjectPage() {
 
@@ -19,13 +18,10 @@ export default async function ProjectPage() {
     }
     return (
         <section className="w-screen h-screen overflow-hidden flex items-start justify-end  ">
-            <main className=" w-4/5  flex flex-col items-start justify-center p-20">
+            <main className=" w-4/5  h-full flex flex-col items-start justify-center p-20">
 
                 <StudiesNav />
 
-
-
-                <NavLink href="/work" active={true} type="back">Go back</NavLink>
 
                 <section className={`${fontCormorant.className} min-w-[500px] flex z-10 flex-col items-center justify-center gap-10 w-full h-[calc(100vh-100px)] p-10 pb-20`}>
 

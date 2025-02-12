@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import projects from "@/lib/work/portfolio/projects";
 import NavLink from "@/components/NavLink";
 import { fontManrope, fontCormorant, fontSpaceMono } from "@/lib/font";
 import { getProjectContent } from "@/lib/mdUtils";
@@ -10,25 +9,25 @@ import { BadgeInfo } from "lucide-react";
 
 // Générer les paramètres statiques pour chaque projet
 export async function generateStaticParams() {
-    return projects.map((project) => ({
-        id: project.id.toString(),
+    return ['1', '2', '501', '502'].map((id) => ({
+        id,
     }));
 }
 
 // Fonction pour récupérer un projet par son ID
-function getProjectById(id: string) {
-    return projects.find((project) => project.id.toString() === id);
-}
+// function getProjectById(id: string) {
+//     return projects.find((project) => project.id.toString() === id);
+// }
 
 // Page du projet
 export default async function ProjectPage({ params }: { params: { id: string } }) {
-    const project = getProjectById(params.id);
+    // const project = getProjectById(params.id);
 
-    if (!project) {
-        notFound();
-    }
+    // if (!project) {
+    //     notFound();
+    // }
 
-    const projectContent = await getProjectContent(project.mdFile);
+    // const projectContent = await getProjectContent(project.mdFile);
 
     return (
         <main className="min-h-screen w-4/5 flex flex-col items-start justify-center p-20">
@@ -36,9 +35,11 @@ export default async function ProjectPage({ params }: { params: { id: string } }
 
 
 
+            pfsdfsdfs {params.id}
 
 
-            <div className={`${fontCormorant.className} min-w-[500px] flex z-10 flex-col items-center justify-center gap-10 w-full h-[calc(100vh-100px)] p-10 pb-20`}>
+
+            {/* <div className={`${fontCormorant.className} min-w-[500px] flex z-10 flex-col items-center justify-center gap-10 w-full h-[calc(100vh-100px)] p-10 pb-20`}>
                 <h1 className="text-8xl">{project.title}</h1>
                 <p className={`${fontManrope.className} text-lg text-center`}>{project.description}</p>
 
@@ -88,11 +89,8 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                     `}
                 dangerouslySetInnerHTML={{ __html: projectContent.contentHtml }}
             />
-            <ScrollToTop />
+            <ScrollToTop /> */}
 
-            <div className="w-full h-40 flex items-start flex-col justify-center  mt-10">
-                <NavLink href="/work" active={true} type="back">Go back</NavLink>
-            </div>
         </main>
     );
 } 

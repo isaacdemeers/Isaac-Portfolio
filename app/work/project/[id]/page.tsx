@@ -4,9 +4,9 @@ import NavLink from "@/components/NavLink";
 import { fontManrope, fontCormorant, fontSpaceMono } from "@/lib/font";
 import { getProjectContent } from "@/lib/mdUtils";
 import ScrollToTop from "@/components/ScrollToTop";
-import Link from "next/link";
+import Linke from "next/link";
 import Tag from "@/components/Tag";
-import { BadgeInfo } from "lucide-react";
+import { BadgeInfo, Link } from "lucide-react";
 
 // Générer les paramètres statiques pour chaque projet
 export async function generateStaticParams() {
@@ -31,7 +31,7 @@ export default async function ProjectPage({ params }: { params: { id: string } }
     const projectContent = await getProjectContent(project.mdFile);
 
     return (
-        <main className="min-h-screen w-screen flex flex-col items-start justify-center p-20">
+        <main className="min-h-screen w-screen flex flex-col items-start justify-center p-20 ">
 
 
 
@@ -66,7 +66,9 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                     <p className={`${fontSpaceMono.className} text-sm`}>{project.readTime} min read</p>
 
 
-                    <div className=" bg-slate-200 border border-slate-300 flex items-start flex-col justify-start rounded-2xl p-4 gap-2 mt-10">
+
+
+                    <div className=" bg-[#fbeddf] border border-[#f7d6b6] flex items-start flex-col justify-start rounded-2xl w-full p-4 gap-4 mt-10">
                         <div className="flex items-center gap-2">
                             <BadgeInfo size={16} className="text-slate-900" />
                             <h2 className={`${fontManrope.className} text-md`}>Note</h2>

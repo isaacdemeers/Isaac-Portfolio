@@ -7,7 +7,7 @@ import { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 
-import xequal from "@/public/frame_game.svg";
+import xequal from "@/public/frame_work.svg";
 
 import projects from "@/lib/games/projects";
 import { Separator } from "@/components/ui/separator";

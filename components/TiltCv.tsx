@@ -19,7 +19,7 @@ export default function tiltCv() {
 
     return (
 
-        <div className="w-fit h-fit scale-[0.8]  rounded-lg">
+        <div className="w-fit h-fit scale-[0.8] shadow-2xl  rounded-lg">
             <Image src={cv} data-tilt data-tilt-scale="1.1" alt="CV Isaac Demeerseman" width={1000} height={1000} className="w-full h-full object-contain shadow-lg rounded-lg" />
         </div>
     );

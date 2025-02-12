@@ -48,7 +48,7 @@ export default function Home() {
 
             <NavLink href="https://github.com/isaacdemeers" active={true} type="Link">github</NavLink>
 
-            <Separator className="bg-slate-300 h-px w-10 my-4" />
+            <Separator className="bg-emerald-600 opacity-25 h-px w-10 my-4" />
 
             <NavLink href="/work/cv" active={true} type="arrow" className='border border-emerald-600 rounded-lg px-2 py-1'>Contact me</NavLink>
 
