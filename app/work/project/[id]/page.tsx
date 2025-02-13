@@ -65,7 +65,6 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                     </ul>
                     <p className={`${fontSpaceMono.className} text-sm`}>{project.readTime} min read</p>
 
-
                     <div className=" bg-[#fbeddf] border border-[#f7d6b6] flex items-start flex-col justify-start rounded-2xl w-full p-4 gap-4 mt-10">
                         <div className="flex items-center gap-2">
                             <BadgeInfo size={16} className="text-slate-900" />
