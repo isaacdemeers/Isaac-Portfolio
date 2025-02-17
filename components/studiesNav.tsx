@@ -52,34 +52,34 @@ export default function StudiesNav() {
         {
             title: "Stage",
             href: "/work/studies-portfolio/stage",
-            disabled: false,
+            disabled: true,
             pages: [
                 {
                     title: "Mémoire",
                     href: "/work/studies-portfolio/1",
-                    disabled: true
+                    disabled: false
                 },
                 {
                     title: "Déroulement",
                     href: "/work/studies-portfolio/2",
-                    disabled: true,
+                    disabled: false,
                 }
             ]
         },
         {
             title: "SAÉ",
             href: "/work/studies-portfolio/sae",
-            disabled: false,
+            disabled: true,
             pages: [
                 {
                     title: "PlanIt – 501",
                     href: "/work/studies-portfolio/501",
-                    disabled: true
+                    disabled: false
                 },
                 {
                     title: "Downtale – 502",
                     href: "/work/studies-portfolio/502",
-                    disabled: true,
+                    disabled: false,
                 }
             ]
         }
@@ -98,7 +98,7 @@ export default function StudiesNav() {
 
                 {PAGES.map((page) => (
                     <li key={page.title} className="flex flex-col gap-2 w-full h-fit">
-                        <Link href={page.disabled ? '/work/studies-portfolio' : page.href} className={`w-full flex items-center text-xl justify-start rounded-lg px-3 py-1  ${page.disabled ? 'text-slate-300 cursor-default' : 'text-slate-900'} hover:bg-emerald-600 hover:bg-opacity-40 transition-all duration-200`} ><SquareLibrary size={18} className="mr-2" /> {page.title}</Link>
+                        <Link href={page.disabled ? '' : page.href} className={`w-full flex items-center text-xl justify-start rounded-lg px-3 py-1  ${page.disabled ? ' cursor-default hover:bg-transparent' : ' hover:bg-emerald-600 '} text-slate-900 hover:bg-opacity-40 transition-all duration-200`} ><SquareLibrary size={18} className="mr-2" /> {page.title}</Link>
                         <ul className="flex flex-col gap-2 w-full h-fit">
                             {page.pages.map((subpage) => (
                                 <NavLink
