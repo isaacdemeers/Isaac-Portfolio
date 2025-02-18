@@ -48,7 +48,7 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                         <li className={`${fontSpaceMono.className} text-sm`}>Developed with</li>
 
                         {project.tags.map((tag) => (
-                            <li className="text-sm px-2 cursor-default bg-slate-900 text-white rounded-lg" key={tag}>{tag}</li>
+                            <li className="text-sm px-2 cursor-default bg-neutral-700 text-[#fbeddf] rounded-lg" key={tag}>{tag}</li>
                         ))}
                     </ul>
                     <ul className={`${fontSpaceMono.className} flex flex-col gap-2`}>

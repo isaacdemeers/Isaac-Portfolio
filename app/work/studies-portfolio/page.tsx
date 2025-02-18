@@ -5,8 +5,7 @@ import { getProjectContent } from "@/lib/mdUtils";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Link } from "lucide-react";
 import StudiesNav from "@/components/studiesNav";
-
-
+import Content from "@/components/Content";
 
 // Page du projet
 export default async function ProjectPage() {
@@ -28,7 +27,7 @@ export default async function ProjectPage() {
                     <h1 className="text-9xl text-center leading-10">Isaac <br /> <br />  <span className={`${fontSpaceMono.className} text-6xl font-extralight  text-slate-900 uppercase`}> Demeerseman</span> </h1>
                     <p className={`${fontManrope.className} text-lg text-center w-full text-slate-600`}> <span className="text-slate-800 font-semibold">Portfolio de compétences</span>  pour l'année 2024 / 2025.
                         <br />
-                        3eme année de BUT Métiers du multimédia et de l'internet.
+                        3ème année de BUT Métiers du multimédia et de l'internet.
                     </p>
 
 

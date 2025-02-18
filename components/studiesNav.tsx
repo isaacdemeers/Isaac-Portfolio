@@ -52,34 +52,34 @@ export default function StudiesNav() {
         {
             title: "Stage",
             href: "/work/studies-portfolio/stage",
-            disabled: false,
+            disabled: true,
             pages: [
                 {
                     title: "Mémoire",
                     href: "/work/studies-portfolio/1",
-                    disabled: true
+                    disabled: false
                 },
                 {
                     title: "Déroulement",
                     href: "/work/studies-portfolio/2",
-                    disabled: true,
+                    disabled: false,
                 }
             ]
         },
         {
             title: "SAÉ",
             href: "/work/studies-portfolio/sae",
-            disabled: false,
+            disabled: true,
             pages: [
                 {
                     title: "PlanIt – 501",
                     href: "/work/studies-portfolio/501",
-                    disabled: true
+                    disabled: false
                 },
                 {
                     title: "Downtale – 502",
                     href: "/work/studies-portfolio/502",
-                    disabled: true,
+                    disabled: false,
                 }
             ]
         }
@@ -88,7 +88,7 @@ export default function StudiesNav() {
     console.log(pathname)
 
     return (
-        <nav className="flex fixed flex-row items-start justify-center gap-4 top-0 left-0  w-1/5 px-5  h-full bg-[#fbeddf] border border-[#f7d6b6] text-white">
+        <nav className="flex fixed flex-row items-start z-[60] justify-center gap-4 top-0 left-0  w-1/5 px-5  h-full bg-[#fbeddf] border border-[#f7d6b6] text-white">
             <ul className="flex flex-col  gap-6 w-full h-full rounded-lg overflow-scroll noscroll py-20 ">
                 <Link href='/work/' className={`w-full flex items-center text-xl justify-start rounded-lg px-3 py-1 hover:bg-emerald-600 hover:bg-opacity-40 transition-all duration-200  text-slate-900`} ><ArrowLeft size={18} className="mr-2" /> Work</Link>
                 <Separator className="h-px w-full bg-[#f7d6b6]" />
@@ -98,7 +98,7 @@ export default function StudiesNav() {
 
                 {PAGES.map((page) => (
                     <li key={page.title} className="flex flex-col gap-2 w-full h-fit">
-                        <Link href={page.disabled ? '/work/studies-portfolio' : page.href} className={`w-full flex items-center text-xl justify-start rounded-lg px-3 py-1  ${page.disabled ? 'text-slate-300 cursor-default' : 'text-slate-900'} hover:bg-emerald-600 hover:bg-opacity-40 transition-all duration-200`} ><SquareLibrary size={18} className="mr-2" /> {page.title}</Link>
+                        <Link href={page.disabled ? '' : page.href} className={`w-full flex items-center text-xl justify-start rounded-lg px-3 py-1  ${page.disabled ? ' cursor-default hover:bg-transparent' : ' hover:bg-emerald-600 '} text-slate-900 hover:bg-opacity-40 transition-all duration-200`} ><SquareLibrary size={18} className="mr-2" /> {page.title}</Link>
                         <ul className="flex flex-col gap-2 w-full h-fit">
                             {page.pages.map((subpage) => (
                                 <NavLink
