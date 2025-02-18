@@ -1,6 +1,6 @@
 
 
-import Loader from "@/components/Loader";
+// import Loader from "@/components/Loader";
 
 import StudiesNav from "@/components/studiesNav";
 
@@ -12,7 +12,6 @@ export default function RootLayout({
 }>) {
     return (
         <>
-            <Loader />
             <section className="w-screen h-screen flex items-start justify-end  ">
 
                 <StudiesNav />

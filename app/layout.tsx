@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import Content from "../components/Content";
+// import Content from "../components/Content";
 import { Analytics } from "@vercel/analytics/react"
+import Loader from "@/components/Loader";
+// import Loader from "@/components/Loader";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -20,9 +22,9 @@ return (
     <body className={`${spaceGrotesk.className} antialiased bg-[#FFF4EA] overflow-x-hidden`}>
       <div className="fixed top-0 left-0 w-full h-14 bg-gradient-to-b from-[#FFF4EA] to-transparent z-[70]"></div>
       <div className="fixed bottom-0 left-0 w-full h-14 bg-gradient-to-t from-[#FFF4EA] to-transparent z-[70]"></div>
-      <Content>
+        <Loader />
+
         {children}
-      </Content>
 <Analytics />
     </body>
   </html>
