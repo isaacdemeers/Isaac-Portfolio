@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import Loader from "../components/Loader";
-import { motion } from "framer-motion";
 import Content from "../components/Content";
+import { Analytics } from "@vercel/analytics/react"
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -24,7 +23,7 @@ return (
       <Content>
         {children}
       </Content>
-
+<Analytics />
     </body>
   </html>
 )};

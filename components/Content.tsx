@@ -3,20 +3,20 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { usePathname } from "next/navigation"
 import { ReactNode } from "react"
-import { useEffect, useState } from "react"
+// import { useEffect, useState } from "react"
 
 export default function Content({ children }: { children: ReactNode }) {
     const pathname = usePathname()
 
-    const [isLoading, setIsLoading] = useState(false)  
+    // const [isLoading, setIsLoading] = useState(false)  
 
-    useEffect(() => {
-        setIsLoading(true)
-        const timeout = setTimeout(() => {
-            setIsLoading(false)
-        }, 800)
-        return () => clearTimeout(timeout)
-    }, [pathname])
+    // useEffect(() => {
+    //     setIsLoading(true)
+    //     const timeout = setTimeout(() => {
+    //         setIsLoading(false)
+    //     }, 800)
+    //     return () => clearTimeout(timeout)
+    // }, [pathname])
 
     return (
         <AnimatePresence mode="wait">
