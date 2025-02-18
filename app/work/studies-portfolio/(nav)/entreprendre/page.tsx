@@ -18,12 +18,6 @@ export default async function ProjectPage() {
     }
     return (
         <main className=" w-4/5  flex flex-col items-start justify-center p-20">
-
-
-
-
-
-
             <section className={`min-w-[500px] flex z-10 flex-col items-center justify-center gap-10 w-full h-[calc(100vh-100px)] p-10 pb-20`}>
 
                 <h1 className={`${fontSpaceMono} text-9xl text-center uppercase`}>Entreprendre,</h1>

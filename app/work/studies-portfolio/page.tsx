@@ -23,7 +23,7 @@ export default async function ProjectPage() {
 
                 <section className={`${fontCormorant.className} min-w-[500px] flex z-10 flex-col items-center justify-center gap-10 w-full h-[calc(100vh-100px)] p-10 pb-20`}>
 
-                    <h1 className="text-9xl text-center leading-10">Isaac <br /> <br />  <span className={`${fontSpaceMono.className} text-6xl font-extralight  text-slate-900 uppercase`}> Demeerseman</span> </h1>
+                    <h1 className="text-9xl text-center leading-10">Isaac <br /> <br />  <span className={`${fontSpaceMono.className} text-6xl font-extralight   uppercase`}> Demeerseman</span> </h1>
                     <p className={`${fontManrope.className} text-lg text-center w-full text-slate-600`}> <span className="text-slate-800 font-semibold">Portfolio de compétences</span>  pour l'année 2024 / 2025.
                         <br />
                         3ème année de BUT Métiers du multimédia et de l'internet.
