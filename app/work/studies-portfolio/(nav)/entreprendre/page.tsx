@@ -3,42 +3,38 @@ import NavLink from "@/components/NavLink";
 import { fontManrope, fontCormorant, fontSpaceMono } from "@/lib/font";
 import { getProjectContent } from "@/lib/mdUtils";
 import ScrollToTop from "@/components/ScrollToTop";
-import Link from "next/link";
-import Tag from "@/components/Tag";
-import { BadgeInfo } from "lucide-react";
+import { Link } from "lucide-react";
 
-// Générer les paramètres statiques pour chaque projet
-export async function generateStaticParams() {
-    return ['1', '2', '501', '502'].map((id) => ({
-        id,
-    }));
-}
 
-// Fonction pour récupérer un projet par son ID
-// function getProjectById(id: string) {
-//     return projects.find((project) => project.id.toString() === id);
-// }
+
 
 // Page du projet
-export default async function ProjectPage({ params }: { params: { id: string } }) {
-    
+export default async function ProjectPage() {
 
-   const projectContent = await getProjectContent(params.id + '.md', "studies/others");
+
+    const projectContent = await getProjectContent("entreprendre.md", "studies");
     if (!projectContent) {
         notFound();
     }
-
     return (
-        <main className="min-h-screen w-4/5 flex flex-col items-start justify-center p-20">
+        <main className=" w-4/5  flex flex-col items-start justify-center p-20">
 
 
 
 
-            pfsdfsdfs {params.id}
+
+
+            <section className={`min-w-[500px] flex z-10 flex-col items-center justify-center gap-10 w-full h-[calc(100vh-100px)] p-10 pb-20`}>
+
+                <h1 className={`${fontSpaceMono} text-9xl text-center uppercase`}>Entreprendre,</h1>
+                <p className={`${fontManrope.className} text-lg text-center w-full`}>pour le web et les médias numériques.
+                </p>
 
 
 
-            
+            </section>
+
+
             <article
                 className={`
                         ${fontManrope.className} 
@@ -50,7 +46,8 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                     `}
                 dangerouslySetInnerHTML={{ __html: projectContent.contentHtml }}
             />
-            <ScrollToTop /> 
+            <ScrollToTop />
+
 
         </main>
     );

@@ -88,7 +88,7 @@ export default function StudiesNav() {
     console.log(pathname)
 
     return (
-        <nav className="flex fixed flex-row items-start justify-center gap-4 top-0 left-0  w-1/5 px-5  h-full bg-[#fbeddf] border border-[#f7d6b6] text-white">
+        <nav className="flex fixed flex-row items-start z-[60] justify-center gap-4 top-0 left-0  w-1/5 px-5  h-full bg-[#fbeddf] border border-[#f7d6b6] text-white">
             <ul className="flex flex-col  gap-6 w-full h-full rounded-lg overflow-scroll noscroll py-20 ">
                 <Link href='/work/' className={`w-full flex items-center text-xl justify-start rounded-lg px-3 py-1 hover:bg-emerald-600 hover:bg-opacity-40 transition-all duration-200  text-slate-900`} ><ArrowLeft size={18} className="mr-2" /> Work</Link>
                 <Separator className="h-px w-full bg-[#f7d6b6]" />

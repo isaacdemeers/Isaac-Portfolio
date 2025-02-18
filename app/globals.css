@@ -26,6 +26,9 @@
   .prose code::after {
     content: none !important;
   }
+  .prose {
+    @apply text-neutral-700;
+  }
 
   /* Style pour les blocs de code */
   .prose pre {
@@ -61,7 +64,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
-  @apply text-slate-900
+  @apply text-neutral-700
 }
 
 /* Transitions globales */
