@@ -5,7 +5,6 @@ import { getProjectContent } from "@/lib/mdUtils";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Link } from "lucide-react";
 import StudiesNav from "@/components/studiesNav";
-import Content from "@/components/Content";
 
 // Page du projet
 export default async function ProjectPage() {
