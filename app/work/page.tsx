@@ -79,7 +79,10 @@ export default function Work() {
                         <h2 className={`${fontSpaceMono.className} text-3xl text-center text-slate-900`}>Projects</h2>
                         {projects.length > 0 ? <p className={`${fontManrope.className} text-sm text-center mt-2  text-slate-500`}>{projects.length} projects</p> : <p className={`${fontManrope.className} text-xs text-center mt-2  text-slate-500 uppercase`}>No projects yet.</p>}
 
+
                     </div>
+                    <p className=" text-xs text-slate-500 absolute bottom-0">hover me</p>
+
 
                 </div>
 

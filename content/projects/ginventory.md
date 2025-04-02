@@ -6,7 +6,7 @@
 
 ## **Description**
 
-This project is a remake of the game 'Ginventory' website. It is a training project to learn about Next.js, Tailwind CSS, and TypeScript.
+This project is a remake of the 'Ginventory' website. It is a training project to learn about Next.js, Tailwind CSS, and TypeScript.
 
 I used the original website as a reference and tried to recreate it as closely as possible.
 

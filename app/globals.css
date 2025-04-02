@@ -19,13 +19,19 @@
     @apply prose-pre:p-4 prose-pre:rounded-lg;
   }
 
-
+  /* Style pour les lignes horizontales */
+  .prose hr {
+    @apply border-[#aacab0];
+    @apply border-[1px];
+    @apply rounded-full;
+  }
 
   /* Masquer les backticks autour du code */
   .prose code::before,
   .prose code::after {
     content: none !important;
   }
+
   .prose {
     @apply text-neutral-700;
   }
