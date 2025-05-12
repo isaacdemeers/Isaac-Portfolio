@@ -35,16 +35,18 @@ export default function NavLink({ href, children, active, type, className }: {
     }
 
     return (
-        <li className={`${className} group flex items-center gap-2 transition-transform duration-100`}>
+        <li className={`${className} relative group flex items-center gap-2 transition-transform duration-100  rounded-lg`}>
             {arrow}
             <a
                 href={href}
                 onClick={handleClick}
-                className={`${active ? 'group-hover:underline cursor-pointer text-emerald-600' : ' cursor-default line-through text-slate-600'} ${style.link} flex items-center gap-1`}
+                className={`${active ? 'group-hover:underline cursor-pointer  text-emerald-600' : ' cursor-default line-through text-slate-600'} ${style.link} flex items-center gap-1`}
             >
                 {children}
                 {type == 'Link' && <ArrowUpRight className="w-4 h-4" />}
             </a>
+
+            <div className='bg-[#FFF4EA] top-0 left-0 blur-sm absolute -z-20 w-full h-full'></div>
         </li>
     )
 }

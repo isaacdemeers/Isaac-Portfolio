@@ -31,14 +31,6 @@ export default async function ProjectPage({ params }: { params: { id: string } }
     return (
         <main className="min-h-screen w-4/5 flex flex-col items-start justify-center p-20">
 
-
-
-
-            pfsdfsdfs {params.id}
-
-
-
-            
             <article
                 className={`
                         ${fontManrope.className} 

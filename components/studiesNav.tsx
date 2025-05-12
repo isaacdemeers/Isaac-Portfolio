@@ -55,12 +55,12 @@ export default function StudiesNav() {
             disabled: true,
             pages: [
                 {
-                    title: "Mémoire",
+                    title: "L'entreprise",
                     href: "/work/studies-portfolio/1",
                     disabled: false
                 },
                 {
-                    title: "Déroulement",
+                    title: "Missions",
                     href: "/work/studies-portfolio/2",
                     disabled: false,
                 }
