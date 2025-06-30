@@ -73,3 +73,5 @@ PlanIt leverages modern tools and frameworks to ensure high performance, scalabi
 ## **Conclusion**
 
 PlanIt represents the culmination of a four-month collaborative effort within the context of our studies. While it remains a student project, it demonstrates our ability to work with modern technologies and apply best practices in web development.
+
+

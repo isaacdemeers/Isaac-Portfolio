@@ -26,7 +26,7 @@ export default async function ProjectPage() {
                     <h1 className="text-9xl text-center leading-10">Isaac <br /> <br />  <span className={`${fontSpaceMono.className} text-6xl font-extralight   uppercase`}> Demeerseman</span> </h1>
                     <p className={`${fontManrope.className} text-lg text-center w-full text-slate-600`}> <span className="text-slate-800 font-semibold">Portfolio de compétences</span>  pour l'année 2024 / 2025.
                         <br />
-                        3ème année de BUT Métiers du multimédia et de l'internet.
+                        3ème année de BUT Métiers du Multimédia et de l'Internet.
                     </p>
 
 

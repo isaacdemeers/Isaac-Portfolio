@@ -36,17 +36,35 @@ export default function StudiesNav() {
         {
             title: "Développer",
             href: "/work/studies-portfolio/developper",
-            disabled: false,
+            disabled: true,
             pages: [
-
+                {
+                    title: "Semestre 5",
+                    href: "/work/studies-portfolio/3",
+                    disabled: false
+                },
+                {
+                    title: "Semestre 6",
+                    href: "/work/studies-portfolio/4",
+                    disabled: false
+                }
             ]
         },
         {
             title: "Entreprendre",
             href: "/work/studies-portfolio/entreprendre",
-            disabled: false,
+            disabled: true,
             pages: [
-
+                {
+                    title: "Semestre 5",
+                    href: "/work/studies-portfolio/5",
+                    disabled: false
+                },
+                {
+                    title: "Semestre 6",
+                    href: "/work/studies-portfolio/6",
+                    disabled: false
+                }
             ]
         },
         {
@@ -66,23 +84,23 @@ export default function StudiesNav() {
                 }
             ]
         },
-        {
-            title: "SAÉ",
-            href: "/work/studies-portfolio/sae",
-            disabled: true,
-            pages: [
-                {
-                    title: "PlanIt – 501",
-                    href: "/work/studies-portfolio/501",
-                    disabled: false
-                },
-                {
-                    title: "Downtale – 502",
-                    href: "/work/studies-portfolio/502",
-                    disabled: false,
-                }
-            ]
-        }
+        // {
+        //     title: "SAÉ",
+        //     href: "/work/studies-portfolio/sae",
+        //     disabled: true,
+        //     pages: [
+        //         {
+        //             title: "PlanIt – 501",
+        //             href: "/work/studies-portfolio/501",
+        //             disabled: false
+        //         },
+        //         {
+        //             title: "Downtale – 502",
+        //             href: "/work/studies-portfolio/502",
+        //             disabled: false,
+        //         }
+        //     ]
+        // }
     ]
 
     console.log(pathname)

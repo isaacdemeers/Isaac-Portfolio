@@ -1,0 +1,58 @@
+Introduction / Présentation
+Bonjour, je m’appelle Isaac Demeerseman, je suis actuellement étudiant en troisième année de BUT Métiers du Multimédia et de l’Internet à l’université de Limoges.
+Depuis bientôt trois ans, je me forme aux différents métiers du numérique, avec une spécialisation dans le développement web, la création d’interfaces interactives, et la gestion de projets numériques.
+Durant ma formation, j’ai eu l’opportunité de travailler sur de nombreux projets concrets, souvent en groupe, ce qui m’a permis de développer à la fois des compétences techniques solides et une vraie capacité à m’adapter aux contraintes d’un projet réel.
+J’ai également effectué deux stages. Le premier en deuxième année m’a permis de me confronter pour la première fois au monde professionnel, et le second, plus récemment, a été particulièrement formateur : j’ai travaillé sur la mise à jour et l’amélioration de plugins pour le CMS SPIP, avec des enjeux forts autour de l’accessibilité, de la performance et de l’expérience utilisateur.
+Cette expérience m’a beaucoup appris, aussi bien sur le plan technique que sur le plan organisationnel. Elle m’a aussi confirmé mon envie de rejoindre un environnement créatif et exigeant comme celui proposé par l’agence MMIAOU.
+Aujourd’hui, je suis ici pour vous expliquer pourquoi je pense être un bon candidat — voire le candidat idéal — pour ce poste de développeur web et interfaces interactives.
+Je vais vous présenter dans un premier temps les compétences techniques que j’ai développées au fil de mon parcours, puis mes compétences transversales Enfin, je vous expliquerai ce qui me motive particulièrement dans cette offre et pourquoi MMIAOU est une entreprise dans laquelle je me projette vraiment.
+Je vais commencer par les bases qui sont HTML CSS. ce sont vraiment des langages que je connais très bien  car ils ont fait partie intégrante de ma formation, ainsi que pendant mes stages en entreprise. j'ai pu les utiliser dans différents contextes et avec différentes formes comme SCSS ou Tailwind, pour le CSS et Aframe en HTML.
+
+ pour ce qui est du JavaScript, il a une place beaucoup plus central dans mon apprentissage.  je l'ai utilisé dans la plupart des projets que j'ai pu réaliser pendant ma formation, ainsi que pendant mes deux stages en entreprise.  Par exemple j'ai pu l'utiliser lors de la creation d’un site de vizualisation de donnée avec plusieur filtres et graphiques lors d'un projet tutoré ou également dans un contexte plus complexe comme lors de la création  d'un site fictif de click and collect. mais le moment où j'ai pu le plus le mettre en pratique. c’est lors de mon stage  Car j'ai pu repenser entièrement l'intégration d'un plugin en JavaScript et PHP, où il a fallu repenser de nombreux éléments, comme les pop-up ou les scripts de configuration. cela m'a confronté à des contraintes techniques réelles, et m'a demandé de gérer les conflits entre anciens et nouveaux code.
+
+ mes compétences dans ces trois langages me permettent également de réaliser des intégration du site ou d'applications de manière rapide et fidèle. comme par exemple lors de  l'exercice qui consistait à reproduire un site existant à l'identique. Durant cet exercice, j'ai également pu utiliser des librairies externes pour gérer les animations du site j’ai du me documenté pour trouver une librairie capable de faire les memes animation.
+
+ enfin, j'ai pu utiliser PHP pour réaliser des projets utiles et fonctionnels. Je l'ai d'abord appris de maniere classique ce qui m'a permis de comprendre  son fonctionnement puis par la suite  je l'ai régulièrement utilisé avec un Framework pour accélérer les choses et  pour se focaliser sur ce qui est vraiment important. PHP vraiment permis de produire des applications sécuriser et entièrement fonctionnel. Il m'a également permis de faire le lien avec des bases de données souvent mysql pour gérer des données ou des utilisateurs. comme lors de mon dernier, projet, tutoriel, moi et mon équipe vendu produire un calendrier partagé qui  permet de gérer des évènements des utilisateurs et les permissions.
+
+ j'ai également pu mettre en pratique mes connaissances en PHP lors de mon stage, car le fonctionnement de SPIP est basé sur ce langage.  le système de communication entre le code et le site est à la fois  spécifique, et nouveau pour moi, ce qui m'a obligé à aller chercher dans la documentation de SPIP pour trouver mes réponses
+
+. J'aimerais maintenant vous expliquer un petit peu comment j'ai  utiliser ses connaisance avec d'autres outils pour réellement produire des projets concrets. 
+Tout d'abord,  Durant ma formation, nous avons vite arrêté d'décrire l'entièreté du code à la main au profit de framework moderne.
+ Comme je l'ai déjà  dit des Frameworks pour PHP, mais aussi pour JavaScript. J'ai en grande partie utilisé  NeXTJS. ce qui m'a permis d'être bien plus rapide et efficace pendant mon développement comme par exemple lors de la nuit du code qui est un évènement dans lequel nous devions  coder un jeu sur le thème de l'écologie en moins de 24 heures. j’ai rapidement pu mettre en place une base utilisable par tout, mes autres camarades et cela nous a permis de tous utiliser les mêmes standards d'écriture.
+
+ j'ai également utilisé les compétences acquises en hébergement Web pour mettre en ligne les projets que j'ai pu réaliser comme les projets tutoré comme le calendrier partagé ou mon jeu 3D et mes projets personnels comme mon portfolio
+
+ pour gérer la collaboration entre tous les membres de l'équipe durant ses projets, j'ai dû utiliser différents logiciels de collaboration comme une messagerie dédiée pour structurer nos échanges et on gardait une trace écrite ou encore trello pour gérerles différentes tâches du projet.  pour organiser le code, j'ai la plupart du temps utilisé GIT. c’est d’ailleur pendant mon stage que j’ai  pu mettre en pratique l'utilisation des commits conventionnel ainsi que des journal de changement
+
+
+
+Au-delà des compétences techniques, je pense que mes qualités humaines et ma façon de travailler en équipe sont aussi des vrais atouts pour le poste. Le développement web, ce n’est pas juste écrire du code dans son coin. C’est aussi comprendre un besoin, échanger avec différents profils, savoir s’adapter et bien communiquer. Et c’est justement dans ce genre de contexte que je me sens à l’aise.
+
+Je suis quelqu’un d’assez rigoureux dans mon travail. Que ce soit dans l’organisation ou dans l’écriture du code, j’aime quand c’est clair, propre et facile à comprendre. Cette rigueur m’a vraiment été utile pendant mon stage, où je devais faire évoluer un plugin existant tout en gardant une certaine stabilité. Il fallait que le code reste lisible et maintenable, même avec les changements.
+
+Je suis aussi très autonome. Pendant mon stage, j’étais souvent seul à intervenir sur le plugin, même si j’étais bien encadré par mon tuteur. Cette autonomie m’a permis d’apprendre à mieux gérer mon temps, à anticiper certains problèmes, et à organiser mon travail semaine par semaine. J’avais des objectifs clairs à court et moyen terme, et je notais les difficultés rencontrées pour en parler pendant nos réunions hebdo.
+
+Mais être autonome ne veut pas dire travailler dans son coin. J’aime vraiment travailler en équipe. Durant la formation, on a souvent eu des projets de groupe avec une vraie répartition des rôles, des livrables à faire ensemble, et des deadlines à tenir. Ça m’a appris à écouter les autres, à défendre mes idées, et à faire des compromis quand il le fallait. Et même pendant mon stage, où j’étais souvent seul sur le code, j’ai collaboré régulièrement avec mon tuteur pour valider les fonctionnalités, définir les priorités, et faire les bons choix techniques.
+
+Je suis aussi naturellement curieux sur le plan technique. J’aime comprendre comment ça marche, aller lire la doc, comparer les solutions, tester de nouveaux outils. C’est cette curiosité qui m’a permis de m’adapter rapidement à CKEditor 5, que je ne connaissais pas du tout au départ. J’ai pris le temps de bien me former dessus en autonomie, avec une veille régulière pour rester à jour.
+
+Et puis je fais aussi très attention à l’utilisateur final. Pour moi, coder ce n’est pas juste faire en sorte que ça marche. Il faut aussi que ce soit clair, agréable à utiliser, et adapté à ceux qui vont s’en servir. Pendant mon stage, j’ai beaucoup travaillé cet aspect-là, notamment en retravaillant les pop-ups et les boutons pour qu’ils soient plus modernes, plus simples, et plus accessibles.
+
+Toutes ces compétences humaines, je les vois vraiment comme un complément à la technique. Elles m’aident à m’intégrer facilement à une équipe, à comprendre les enjeux réels d’un projet, et à proposer des solutions qui prennent en compte à la fois le code, le design et l’expérience utilisateur.
+
+Pourquoi je pense être un bon candidat? 
+Je dirais que c’est un mélange entre mes compétences techniques, ma capacité à être autonome, et mon attention constante à l’expérience utilisateur. 
+Dans tous les projets sur lesquels j’ai travaillé, j’ai toujours pris le temps de bien comprendre le contexte pour proposer des solutions simples, efficaces, et surtout adaptées aux besoins.
+
+Pendant mon stage, j’ai justement eu l’occasion de travailler seul sur un plugin assez complexe. J’ai repensé son architecture, j’ai amélioré son accessibilité, et j’ai fait en sorte qu’il soit plus facile à maintenir. Cette expérience m’a vraiment aidé à gagner en rigueur, à mieux gérer mes priorités, et à faire des choix techniques réfléchis.
+
+Je suis quelqu’un qui apprend vite et qui s’adapte facilement. Quand je découvre un nouvel outil ou une nouvelle techno, je n’attends pas qu’on me dise quoi faire : je cherche, je teste, je me forme en autonomie. C’est cette curiosité qui me pousse à toujours progresser et à rester à jour.
+
+Mon expérience en stage, les compétences acquises en formation, et mon envie de continuer à progresser font de moi un candidat motivé, capable de s'investir pleinement dans les projets proposés.
+
+Et puis, les valeurs de MMIAOU, comme la créativité, l’exigence ou l’accessibilité, me parlent vraiment. Je m’y retrouve totalement. Intégrer votre équipe, pour moi, ce serait une suite logique dans mon parcours, et surtout une super opportunité de contribuer à des projets qui ont du sens.
+
+J’ai envie de continuer à progresser dans un cadre stimulant, aux côtés de personnes exigeantes, passionnées. Et je pense que MMIAOU pourrait vraiment être ce cadre-là.
+
+
+Merci pour votre attention.

@@ -9,7 +9,7 @@ import { BadgeInfo } from "lucide-react";
 
 // Générer les paramètres statiques pour chaque projet
 export async function generateStaticParams() {
-    return ['1', '2', '501', '502'].map((id) => ({
+    return ['1', '2', '3', '4', '5', '6', '501', '502'].map((id) => ({
         id,
     }));
 }
@@ -21,9 +21,9 @@ export async function generateStaticParams() {
 
 // Page du projet
 export default async function ProjectPage({ params }: { params: { id: string } }) {
-    
 
-   const projectContent = await getProjectContent(params.id + '.md', "studies/others");
+
+    const projectContent = await getProjectContent(params.id + '.md', "studies/others");
     if (!projectContent) {
         notFound();
     }
@@ -42,7 +42,7 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                     `}
                 dangerouslySetInnerHTML={{ __html: projectContent.contentHtml }}
             />
-            <ScrollToTop /> 
+            <ScrollToTop />
 
         </main>
     );
